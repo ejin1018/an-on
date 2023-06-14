@@ -2,32 +2,42 @@
   @include fullfull;
   .splash-container{
     @include fullfull;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
+    @include relativeZero;
     .splash-logo{
       display: block;
       width: 55%;
       max-width: 80%;
       margin: 0 auto;
+      padding-top: 65%;
+      opacity: 0;
+      transition:  opacity 1.5s .5s, padding-top .5s 1.8s;
+      &-on{
+        opacity: 1;
+        padding-top: 45%;
+      }
     }
-    .login-btn{
-      width: 85%;
-      padding: 0.6rem;
-      margin: 1rem auto 0;
-      border-radius: 1.3rem;
-      font-weight: 600;
-      text-align: center;
-    }
-    .login-email{
-      color: #fff;
-      background: #67937B;
-    }
-    .not-login{
-      margin-top: 1rem;
-      font-size: 0.8rem;
-      color: #67937B;
-      text-align: center;
+    .login-box{
+      position: absolute;
+      bottom: 15%;
+      width: 100%;
+      .login-btn{
+        width: 85%;
+        padding: 0.6rem;
+        margin: 1rem auto 0;
+        border-radius: 1.3rem;
+        font-weight: 600;
+        text-align: center;
+      }
+      .login-email{
+        color: #fff;
+        background: #67937B;
+      }
+      .not-login{
+        margin-top: 1rem;
+        font-size: 0.8rem;
+        color: #67937B;
+        text-align: center;
+      }
     }
   }
 }
