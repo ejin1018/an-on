@@ -7,7 +7,6 @@ function Splash(){
 
   useEffect(()=>{
     spLogo.current.className = 'splash-logo splash-logo-on'
-    console.log(spLogo.current.className)
     setTimeout(()=>{
       setLoginBlock(true)
     },2300)
