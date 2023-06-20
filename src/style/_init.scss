@@ -10,6 +10,11 @@ p{
   margin: 0;
   padding: 0;
 }
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
 #root{
   width: 100vw;
@@ -23,6 +28,12 @@ p{
   margin: 0 auto;
   background: #fff;
 }
+
+$lightGreen:#67937B;
+$mainGreen:#4C7A62;
+$deepGreen:#174D5A;
+$baseColor:#EADFCD;
+$pointColor:#F6C915;
 
 @mixin fullfull{
   width: 100%;

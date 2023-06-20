@@ -1,0 +1,32 @@
+.botnav-wrap{
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  width: 100%;
+  max-width: 480px;
+  min-width: 320px;
+  transform: translateX(-50%);
+  border-radius: 0.8rem 0.8rem 0 0;
+  background-color: #fff;
+  box-shadow: 0px -2px 5px #67937B1a;
+  .botnav-container{
+    @include flexCenter;
+    padding: 0.8rem 0 1.4rem;
+    li{
+      max-width: 20%;
+      .botnav-btn{
+        &-icon{
+          display: block;
+          width: 45%;
+          margin: 0 auto;
+        }
+        &-name{
+          margin-top: 0.2rem;
+          font-size: 0.8rem;
+          text-align: center;
+          color: $mainGreen;
+        }
+      }
+    }
+  }
+}
