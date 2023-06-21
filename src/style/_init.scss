@@ -3,12 +3,13 @@ html,body{
   font-size: 18px;
 }
 a{
-  display: block;
+  display: inline-block;
   text-decoration: none;
 }
 p{
   margin: 0;
   padding: 0;
+  word-break: keep-all;
 }
 ul{
   list-style: none;
@@ -29,9 +30,19 @@ ul{
   background: #fff;
 }
 
+.hidden{
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 0;
+  line-height: 0;
+  width: 1px;
+  height: 1px;
+}
+
 $lightGreen:#67937B;
-$mainGreen:#4C7A62;
-$deepGreen:#174D5A;
+$mainGreen:#456250;
+$deepGreen:#274C58;
 $baseColor:#EADFCD;
 $pointColor:#F6C915;
 

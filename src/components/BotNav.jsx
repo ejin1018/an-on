@@ -14,19 +14,19 @@ export default function BotNav(){
         <li>
           <Link to={'/home'} className="botnav-btn">
             <img src="/icons/botnav-icon4.png" className="botnav-btn-icon" alt="" />
-            <p className="botnav-btn-name">고장</p>
+            <p className="botnav-btn-name">고&nbsp;&nbsp;장</p>
           </Link>
         </li>
         <li>
           <Link to={'/home'} className="botnav-btn">
             <img src="/icons/botnav-icon5.png" className="botnav-btn-icon" alt="" />
-            <p className="botnav-btn-name">생활</p>
+            <p className="botnav-btn-name">생&nbsp;&nbsp;활</p>
           </Link>
         </li>
         <li>
           <Link to={'/home'} className="botnav-btn">
             <img src="/icons/botnav-icon8.png" className="botnav-btn-icon" alt="" />
-            <p className="botnav-btn-name">이사</p>
+            <p className="botnav-btn-name">이&nbsp;&nbsp;사</p>
           </Link>
         </li>
         <li>

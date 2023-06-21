@@ -4,13 +4,14 @@ html, body {
 }
 
 a {
-  display: block;
+  display: inline-block;
   text-decoration: none;
 }
 
 p {
   margin: 0;
   padding: 0;
+  word-break: keep-all;
 }
 
 ul {
@@ -31,6 +32,16 @@ ul {
   height: 100%;
   margin: 0 auto;
   background: #fff;
+}
+
+.hidden {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 0;
+  line-height: 0;
+  width: 1px;
+  height: 1px;
 }
 
 .splash-wrap {
@@ -61,6 +72,7 @@ ul {
   position: absolute;
   bottom: 15%;
   width: 100%;
+  text-align: center;
 }
 .splash-wrap .splash-container .login-box .login-btn {
   width: 85%;
@@ -104,12 +116,98 @@ ul {
 }
 .botnav-wrap .botnav-container li .botnav-btn-icon {
   display: block;
-  width: 45%;
+  width: 40%;
   margin: 0 auto;
 }
 .botnav-wrap .botnav-container li .botnav-btn-name {
   margin-top: 0.2rem;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   text-align: center;
-  color: #4C7A62;
+  color: #456250;
+}
+
+.intro {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.intro-inner {
+  padding: 5rem 1.2rem 5rem;
+  background: #274C58;
+  border-radius: 0 0 25px 25px;
+}
+.intro-inner .intro-sub-title {
+  margin-bottom: 0.35rem;
+  font-size: 0.7rem;
+  color: #cecece;
+}
+.intro-inner .intro-title {
+  max-width: 80%;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+}
+.intro .service-slide {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -33%;
+  padding-bottom: 25px;
+}
+.intro .service-slide .swiper-slide .service {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-left: 1.2rem;
+  min-height: 5rem;
+  padding: 1.2rem;
+  border-radius: 1rem;
+  background-color: #F2F5F3;
+}
+.intro .service-slide .swiper-slide .service-title {
+  margin-bottom: 0.35rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #456250;
+}
+.intro .service-slide .swiper-slide .service-receipt {
+  display: block;
+  font-size: 0.7rem;
+  color: #456250;
+}
+.intro .service-slide .swiper-slide .service-icon {
+  position: absolute;
+  top: 50%;
+  height: 70%;
+  transform: translateY(-50%);
+}
+.intro .service-slide .swiper-slide .service-icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.intro .service-slide .swiper-slide .service-icon-vert {
+  width: 30%;
+  right: 3%;
+}
+.intro .service-slide .swiper-slide .service-icon-rect {
+  width: 22.5%;
+  right: 7%;
+}
+.intro .service-slide .swiper-pagination {
+  bottom: 0;
+}
+.intro .service-slide .swiper-pagination-bullet {
+  width: 10px;
+  height: 6px;
+  border-radius: 3px;
+  background: #c4c4c4;
+  opacity: 1;
+  transition: width 0.4s;
+}
+.intro .service-slide .swiper-pagination-bullet-active {
+  width: 30px;
+  border-radius: 5px;
+  background: #67937B;
 }/*# sourceMappingURL=style.css.map */
