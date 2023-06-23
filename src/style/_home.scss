@@ -1,7 +1,9 @@
 .intro{
   @include relativeZero;
+  margin-bottom: 25%;
   &-inner{
-    padding: 5rem 1.2rem 5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
     background: $deepGreen;
     border-radius: 0 0 25px 25px;
     .intro-sub-title{
@@ -9,10 +11,8 @@
       font-size: 0.7rem;
       color: #cecece;
     }
-    .intro-title{
+    .title{
       max-width: 80%;
-      font-size: 1.3rem;
-      font-weight: 600;
       color: #fff;
     }
   }
@@ -76,6 +76,40 @@
         width: 30px;
         border-radius: 5px;
         background: $lightGreen;
+      }
+    }
+  }
+}
+.offer{
+  padding-top: 1.6rem;
+  &-slide{
+    margin-top: 1rem;
+    .swiper-slide{
+      height: 8.5rem;
+      border-radius: 1rem;
+      overflow: hidden;
+      background: $lightGreen;
+      .offer-company{
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        background: #0000001a;
+        p{
+          color: #fff;
+        }
+        &-name{
+          font-size: 0.9rem;
+          font-weight: 600;
+        }
+        &-info{
+          margin-top: 0.1rem;
+          font-size: 0.6rem;
+          font-weight: 400;
+        }
       }
     }
   }
