@@ -8,6 +8,29 @@ import "swiper/css/pagination";
 
 import { Pagination } from "swiper";
 
+const offerInfos = [
+  {
+    imgUrl:'/images/offer-img1.png',
+    companyName:'다자바',
+    companyInfo:'서울,경기 | 최소 견적 13만원 ~'
+  },
+  {
+    imgUrl:'/images/offer-img2.png',
+    companyName:'벌레싹싹',
+    companyInfo:'서울,경기,강원 | 최소 견적 17만원 ~'
+  },
+  {
+    imgUrl:'/images/offer-img3.png',
+    companyName:'자바주소',
+    companyInfo:'충남,전라 | 최소 견적 11만원 ~'
+  },
+  {
+    imgUrl:'/images/offer-img4.png',
+    companyName:'포세이프존',
+    companyInfo:'전국 | 최소 견적 16만원 ~'
+  },
+]
+
 export default function Home(){
   return(
     <div>
@@ -63,30 +86,17 @@ export default function Home(){
             spaceBetween={18}
             className="offer-slide"
           >
-            <SwiperSlide>
-              <div className="offer-company">
-                <p className="offer-company-name">다자바</p>
-                <p className="offer-company-info">서울,경기 | 최소 견적 13만원 ~</p>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="offer-company">
-                <p className="offer-company-name">다자바</p>
-                <p className="offer-company-info">서울,경기 | 최소 견적 13만원 ~</p>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="offer-company">
-                <p className="offer-company-name">다자바</p>
-                <p className="offer-company-info">서울,경기 | 최소 견적 13만원 ~</p>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="offer-company">
-                <p className="offer-company-name">다자바</p>
-                <p className="offer-company-info">서울,경기 | 최소 견적 13만원 ~</p>
-              </div>
-            </SwiperSlide>
+            {offerInfos.map((value,idx)=>{
+              const slideSt = {background:`no-repeat center center /cover url(${offerInfos[idx].imgUrl})`}
+              return(
+                <SwiperSlide style={slideSt}>
+                  <div className="offer-company">
+                    <p className="offer-company-name">{value.companyName}</p>
+                    <p className="offer-company-info">{value.companyInfo}</p>
+                  </div>
+                </SwiperSlide>
+              )
+            })}
           </Swiper>
         </div>
       </section>
