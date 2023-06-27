@@ -1,9 +1,8 @@
 .intro{
   @include relativeZero;
   margin-bottom: 25%;
-  &-inner{
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+  &-container{
+    padding: 5rem 1.2rem;
     background: $deepGreen;
     border-radius: 0 0 25px 25px;
     .intro-sub-title{
@@ -111,6 +110,50 @@
           font-weight: 400;
         }
       }
+    }
+  }
+}
+.check{
+  width: 100%;
+  margin-top: 1.6rem;
+  &-inner{
+    // width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 1rem;
+    background-color: #B6C4BD;
+    .section-title,
+    .section-subtitle{
+      color: $deepGreen;
+    }
+  }
+  &-list{
+    min-width: 32%;
+    li{
+      @include relativeZero;
+      margin-bottom: 0.4rem;
+      border-bottom: 1px solid $deepGreen;
+      &::before{
+        content:'';
+        position: absolute;
+        left: 0;
+        top: 2px;
+        width: 0.9rem;
+        height: 0.5rem;
+        transform: rotate(136deg);
+        border-width: 2.5px 2.5px 0 0;
+        border-style: solid;
+        border-color: $deepGreen;
+      }
+      p{
+        text-align: right;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: $deepGreen;
+      }
+    }
+    &-off{
+      opacity: 0.25;
     }
   }
 }

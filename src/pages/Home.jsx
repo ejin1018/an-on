@@ -36,7 +36,7 @@ export default function Home(){
     <div>
       <BotNav />
       <section className="intro">
-        <div className="intro-inner">
+        <div className="intro-container">
           <p className="intro-sub-title">원인 모를 고장, 미루게 되는 교체 ...</p>
           <h2 className="title">더 이상 집에서 일어나는 문제에 스트레스 받지 마세요!</h2>
         </div>
@@ -98,6 +98,28 @@ export default function Home(){
               )
             })}
           </Swiper>
+        </div>
+      </section>
+      <section className="check">
+        <div className="check-inner">
+          <div className="check-box-left">
+            <h2 className="section-title">이사 절차<br/>한 눈에 보기</h2>
+            <h3 className="section-subtitle"><b>이사 체크리스트</b>를 작성해보세요</h3>
+          </div>
+          <ul className="check-list">
+            <li>
+              <p>요금 정산</p>
+            </li>
+            <li>
+              <p>입주 청소</p>
+            </li>
+            <li className="check-list-off">
+              <p>업체 예약</p>
+            </li>
+            <li className="check-list-off">
+              <p>파손 확인</p>
+            </li>
+          </ul>
         </div>
       </section>
     </div>
