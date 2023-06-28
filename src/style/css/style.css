@@ -358,4 +358,113 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .check-list-off {
   opacity: 0.25;
+}
+
+.suggest {
+  margin-top: 2.8rem;
+}
+.suggest .section-subtitle {
+  display: inline-block;
+}
+.suggest-reserve {
+  float: right;
+  padding-right: 0.9rem;
+  color: #456250;
+  font-size: 0.8rem;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.suggest-reserve:after {
+  content: "";
+  position: absolute;
+  right: 0.1rem;
+  top: 0.25rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  transform: rotate(45deg);
+  border: 1.2px solid #456250;
+  border-bottom: transparent;
+  border-left: transparent;
+}
+.suggest-items {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.suggest-items li {
+  max-width: 20%;
+  border-radius: 1rem;
+}
+.suggest-items li:nth-child(odd) {
+  background-color: #F2F5F3;
+}
+.suggest-items li:nth-child(odd) p {
+  color: #456250;
+}
+.suggest-items li:nth-child(even) {
+  background-color: #739583;
+}
+.suggest-items li:nth-child(even) p {
+  color: #F2F5F3;
+}
+.suggest-items li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.suggest-items li a .suggest-img-wrap {
+  width: 80%;
+  height: 58%;
+  margin: 0.6rem auto;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.suggest-items li a .suggest-img-wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.master {
+  margin-top: 2.8rem;
+  padding-bottom: 100px;
+}
+.master-list {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.master-list li {
+  max-width: 20%;
+}
+.master-list li .master-img-wrap {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.master-list li .master-img-wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.master-list li p {
+  font-weight: 400;
+  color: #456250;
+  text-align: center;
+}
+.master-list li .master-name {
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+}
+.master-list li .master-star {
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
 }/*# sourceMappingURL=style.css.map */

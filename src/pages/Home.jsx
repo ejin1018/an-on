@@ -127,25 +127,84 @@ export default function Home(){
         <div className="suggest-inner">
           <h2 className="section-title">불안한 마음이 든다면</h2>
           <h3 className="section-subtitle"><b>이중 잠금 장치</b>를 알아보세요</h3>
-          <Link to={'/home'}>설치 예약하기</Link>
-          <div className="suggest-items">
-            <Link to={'/home'}>
-              <img src="/images/door-lock1.jpg" alt="" />
-              <p className="suggest-items-name">기본형</p>
-            </Link>
-            <Link to={'/home'}>
-              <img src="/images/door-lock2.jpg" alt="" />
-              <p className="suggest-items-name">체인형</p>
-            </Link>
-            <Link to={'/home'}>
-              <img src="/images/door-lock3.jpg" alt="" />
-              <p className="suggest-items-name">보조잠금</p>
-            </Link>
-            <Link to={'/home'}>
-              <img src="/images/door-lock4.jpg" alt="" />
-              <p className="suggest-items-name">기타</p>
-            </Link>
-          </div>
+          <Link to={'/home'} className="suggest-reserve">설치 예약하기</Link>
+          <ul className="suggest-items">
+            <li>
+              <Link to={'/home'}>
+                <div className="suggest-img-wrap">
+                  <img src="/images/door-lock1.jpg" alt="" />
+                </div>
+                <p className="suggest-items-name">기본형</p>
+              </Link>
+            </li>
+            <li>
+              <Link to={'/home'}>
+                <div className="suggest-img-wrap">
+                  <img src="/images/door-lock2.jpg" alt="" />
+                </div>
+                <p className="suggest-items-name">체인형</p>
+              </Link>
+            </li>
+            <li>
+              <Link to={'/home'}>
+                <div className="suggest-img-wrap">
+                  <img src="/images/door-lock3.jpg" alt="" />
+                </div>
+                <p className="suggest-items-name">보조잠금</p>
+              </Link>
+            </li>
+            <li>
+              <Link to={'/home'}>
+                <div className="suggest-img-wrap">
+                  <img src="/images/door-lock4.jpg" alt="" />
+                </div>
+                <p className="suggest-items-name">기타</p>
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section className="master">
+        <div className="master-inner">
+          <h2 className="section-title">우리 동네 설치 기사님 찾아보기</h2>
+          <ul className="master-list">
+            <li>
+              <Link to={'/home'}>
+                <div className="master-img-wrap">
+                  <img src="/images/master-img1.png" alt="" />
+                </div>
+                <p className="master-name">이혜선 기사님</p>
+                <p className="master-star">4.8 점</p>
+              </Link>
+            </li>
+            <li>
+              <Link to={'/home'}>
+                <div className="master-img-wrap">
+                  <img src="/images/master-img2.png" alt="" />
+                </div>
+                <p className="master-name">김광수 기사님</p>
+                <p className="master-star">4.9 점</p>
+              </Link>
+            </li>
+            <li>
+              <Link to={'/home'}>
+                <div className="master-img-wrap">
+                  <img src="/images/master-img3.png" alt="" />
+                </div>
+                <p className="master-name">윤현기 기사님</p>
+                <p className="master-star">4.6 점</p>
+              </Link>
+            </li>
+            <li>
+              <Link to={'/home'}>
+                <div className="master-img-wrap">
+                  <img src="/images/master-img4.png" alt="" />
+                </div>
+                <p className="master-name">김아름 기사님</p>
+                <p className="master-star">4.6 점</p>
+              </Link>
+            </li>
+          </ul>
         </div>
       </section>
     </div>
