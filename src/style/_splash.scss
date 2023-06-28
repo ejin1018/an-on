@@ -1,5 +1,6 @@
 .splash-wrap{
-  @include fullfull;
+  width: 100%;
+  height: 100vh;
   .splash-container{
     @include fullfull;
     @include relativeZero;

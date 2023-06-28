@@ -4,6 +4,7 @@ import "./style/style.scss"
 import Home from "./pages/Home";
 import Splash from "./pages/Splash";
 import Login from "./pages/Login";
+import BotNav from './components/BotNav';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
           <Route path='/' element={<Splash/>} />  
           <Route path='/home' element={<Home/>} />  
           <Route path='/login' element={<Login/>} />  
-        </Routes>      
+        </Routes>
       </div>
     </BrowserRouter>
   );

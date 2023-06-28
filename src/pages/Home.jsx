@@ -33,7 +33,7 @@ const offerInfos = [
 
 export default function Home(){
   return(
-    <div>
+    <div className="home-wrap">
       <BotNav />
       <section className="intro">
         <div className="intro-container">

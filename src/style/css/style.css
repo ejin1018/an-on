@@ -64,15 +64,17 @@ p, h1, h2, h3, h4, h5, h6 {
 
 #root {
   width: 100vw;
+  height: 100%;
   background: #eee;
 }
 
 .App {
   max-width: 480px;
   min-width: 320px;
-  height: 100%;
+  height: 100vh;
   margin: 0 auto;
   background: #fff;
+  overflow-x: hidden;
 }
 
 .hidden {
@@ -108,7 +110,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .splash-wrap {
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 .splash-wrap .splash-container {
   width: 100%;
