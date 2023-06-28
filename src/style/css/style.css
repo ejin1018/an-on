@@ -140,9 +140,9 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .splash-wrap .splash-container .login-box .login-btn {
   width: 85%;
-  padding: 0.6rem;
+  padding: 0.9rem 0;
   margin: 1rem auto 0;
-  border-radius: 1.3rem;
+  border-radius: 1.5rem;
   font-weight: 600;
   text-align: center;
 }
@@ -155,6 +155,54 @@ p, h1, h2, h3, h4, h5, h6 {
   font-size: 0.8rem;
   color: #67937B;
   text-align: center;
+}
+
+.login {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.login-inner {
+  width: 100%;
+  height: 100%;
+}
+.login .splash-logo {
+  max-width: 38%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 15%;
+}
+.login .splash-logo img {
+  display: block;
+  max-width: 100%;
+}
+.login form {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 35%;
+  width: 85%;
+}
+.login form input, .login form button {
+  width: 100%;
+  padding: 0.9rem 1.2rem;
+  box-sizing: border-box;
+  border: 0 none;
+  border-radius: 1.5rem;
+}
+.login form input {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  background: #eee;
+}
+.login form button {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: #456250;
 }
 
 .botnav-wrap {
@@ -215,8 +263,8 @@ p, h1, h2, h3, h4, h5, h6 {
   width: 90%;
   position: absolute;
   left: 50%;
-  bottom: -33%;
   transform: translateX(-50%);
+  bottom: -33%;
   padding-bottom: 25px;
 }
 .intro .service-slide .swiper-slide .service {
@@ -396,7 +444,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .suggest-items li {
   max-width: 20%;
-  border-radius: 1rem;
+  border-radius: 1.2rem;
 }
 .suggest-items li:nth-child(odd) {
   background-color: #F2F5F3;
@@ -414,15 +462,17 @@ p, h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
   display: block;
+  box-sizing: border-box;
+  padding: 0.65rem;
   text-align: center;
   font-size: 0.9rem;
   font-weight: 600;
 }
 .suggest-items li a .suggest-img-wrap {
-  width: 80%;
-  height: 58%;
-  margin: 0.6rem auto;
-  border-radius: 1rem;
+  width: 100%;
+  height: 63%;
+  margin: 0 auto 0.55rem;
+  border-radius: 0.8rem;
   overflow: hidden;
 }
 .suggest-items li a .suggest-img-wrap img {

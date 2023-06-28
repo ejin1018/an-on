@@ -15,6 +15,12 @@ $pointColor:#F6C915;
   left: 0;
 }
 
+@mixin absoluteHalf(){
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 @mixin flexCenter{
   display: flex;
   align-items: center;
