@@ -1,13 +1,13 @@
 .intro{
   @include relativeZero;
-  margin-bottom: 25%;
+  margin-bottom: 18%;
   &-container{
-    padding: 5rem 1.2rem;
+    padding:17% 5%;
     background: $deepGreen;
     border-radius: 0 0 25px 25px;
-    .intro-sub-title{
-      margin-bottom: 0.35rem;
-      font-size: 0.7rem;
+    .intro-subtitle{
+      margin-bottom: 0.45rem;
+      font-size: 0.8rem;
       color: #cecece;
     }
     .title{
@@ -16,15 +16,15 @@
     }
   }
   .service-slide{
-    width: 100%;
+    width: 90%;
     position: absolute;
-    left: 0;
+    left: 50%;
     bottom: -33%;
+    transform: translateX(-50%);
     padding-bottom: 25px;
     .swiper-slide{
       .service{
         @include relativeZero;
-        margin-left: 1.2rem;
         min-height: 5rem;
         padding: 1.2rem;
         border-radius: 1rem;
@@ -80,7 +80,7 @@
   }
 }
 .offer{
-  padding-top: 1.6rem;
+  padding-top: 2.8rem;
   &-slide{
     margin-top: 1rem;
     .swiper-slide{
@@ -115,9 +115,8 @@
 }
 .check{
   width: 100%;
-  margin-top: 1.6rem;
+  margin-top: 2.8rem;
   &-inner{
-    // width: 100%;
     display: flex;
     justify-content: space-between;
     border-radius: 1rem;
@@ -127,8 +126,12 @@
       color: $deepGreen;
     }
   }
+  &-left{
+    padding: 1.2rem;
+  }
   &-list{
     min-width: 32%;
+    padding: 1.2rem;
     li{
       @include relativeZero;
       margin-bottom: 0.4rem;
@@ -146,9 +149,10 @@
         border-color: $deepGreen;
       }
       p{
-        text-align: right;
+        line-height: 1.8;
         font-size: 0.9rem;
         font-weight: 600;
+        text-align: right;
         color: $deepGreen;
       }
     }

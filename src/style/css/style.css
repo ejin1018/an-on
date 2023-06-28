@@ -1,6 +1,56 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1.3;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 html, body {
   font-family: "IBM Plex Sans KR", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 a {
@@ -9,20 +59,11 @@ a {
 }
 
 p, h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
   word-break: keep-all;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 #root {
   width: 100vw;
-  height: 100vh;
   background: #eee;
 }
 
@@ -45,22 +86,22 @@ ul {
 }
 
 [class$=-inner] {
-  margin-left: 1.2rem;
-  margin-right: 1.2rem;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 [class$=title] {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 600;
 }
 
 .section-title {
   color: #456250;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.45rem;
 }
 
 .section-subtitle {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 400;
   color: #456250;
 }
@@ -152,16 +193,16 @@ ul {
   position: relative;
   top: 0;
   left: 0;
-  margin-bottom: 25%;
+  margin-bottom: 18%;
 }
 .intro-container {
-  padding: 5rem 1.2rem;
+  padding: 17% 5%;
   background: #274C58;
   border-radius: 0 0 25px 25px;
 }
-.intro-container .intro-sub-title {
-  margin-bottom: 0.35rem;
-  font-size: 0.7rem;
+.intro-container .intro-subtitle {
+  margin-bottom: 0.45rem;
+  font-size: 0.8rem;
   color: #cecece;
 }
 .intro-container .title {
@@ -169,17 +210,17 @@ ul {
   color: #fff;
 }
 .intro .service-slide {
-  width: 100%;
+  width: 90%;
   position: absolute;
-  left: 0;
+  left: 50%;
   bottom: -33%;
+  transform: translateX(-50%);
   padding-bottom: 25px;
 }
 .intro .service-slide .swiper-slide .service {
   position: relative;
   top: 0;
   left: 0;
-  margin-left: 1.2rem;
   min-height: 5rem;
   padding: 1.2rem;
   border-radius: 1rem;
@@ -234,7 +275,7 @@ ul {
 }
 
 .offer {
-  padding-top: 1.6rem;
+  padding-top: 2.8rem;
 }
 .offer-slide {
   margin-top: 1rem;
@@ -270,7 +311,7 @@ ul {
 
 .check {
   width: 100%;
-  margin-top: 1.6rem;
+  margin-top: 2.8rem;
 }
 .check-inner {
   display: flex;
@@ -282,8 +323,12 @@ ul {
 .check-inner .section-subtitle {
   color: #274C58;
 }
+.check-left {
+  padding: 1.2rem;
+}
 .check-list {
   min-width: 32%;
+  padding: 1.2rem;
 }
 .check-list li {
   position: relative;
@@ -305,9 +350,10 @@ ul {
   border-color: #274C58;
 }
 .check-list li p {
-  text-align: right;
+  line-height: 1.8;
   font-size: 0.9rem;
   font-weight: 600;
+  text-align: right;
   color: #274C58;
 }
 .check-list-off {

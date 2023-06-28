@@ -37,11 +37,12 @@ export default function Home(){
       <BotNav />
       <section className="intro">
         <div className="intro-container">
-          <p className="intro-sub-title">원인 모를 고장, 미루게 되는 교체 ...</p>
+          <p className="intro-subtitle">원인 모를 고장, 미루게 되는 교체 ...</p>
           <h2 className="title">더 이상 집에서 일어나는 문제에 스트레스 받지 마세요!</h2>
         </div>
         <Swiper
           slidesPerView={1.5}
+          spaceBetween={15}
           pagination={{
             clickable: true,
           }}
@@ -89,7 +90,7 @@ export default function Home(){
             {offerInfos.map((value,idx)=>{
               const slideSt = {background:`no-repeat center center /cover url(${offerInfos[idx].imgUrl})`}
               return(
-                <SwiperSlide style={slideSt}>
+                <SwiperSlide style={slideSt} key={idx}>
                   <div className="offer-company">
                     <p className="offer-company-name">{value.companyName}</p>
                     <p className="offer-company-info">{value.companyInfo}</p>
@@ -102,7 +103,7 @@ export default function Home(){
       </section>
       <section className="check">
         <div className="check-inner">
-          <div className="check-box-left">
+          <div className="check-left">
             <h2 className="section-title">이사 절차<br/>한 눈에 보기</h2>
             <h3 className="section-subtitle"><b>이사 체크리스트</b>를 작성해보세요</h3>
           </div>
@@ -120,6 +121,31 @@ export default function Home(){
               <p>파손 확인</p>
             </li>
           </ul>
+        </div>
+      </section>
+      <section className="suggest">
+        <div className="suggest-inner">
+          <h2 className="section-title">불안한 마음이 든다면</h2>
+          <h3 className="section-subtitle"><b>이중 잠금 장치</b>를 알아보세요</h3>
+          <Link to={'/home'}>설치 예약하기</Link>
+          <div className="suggest-items">
+            <Link to={'/home'}>
+              <img src="/images/door-lock1.jpg" alt="" />
+              <p className="suggest-items-name">기본형</p>
+            </Link>
+            <Link to={'/home'}>
+              <img src="/images/door-lock2.jpg" alt="" />
+              <p className="suggest-items-name">체인형</p>
+            </Link>
+            <Link to={'/home'}>
+              <img src="/images/door-lock3.jpg" alt="" />
+              <p className="suggest-items-name">보조잠금</p>
+            </Link>
+            <Link to={'/home'}>
+              <img src="/images/door-lock4.jpg" alt="" />
+              <p className="suggest-items-name">기타</p>
+            </Link>
+          </div>
         </div>
       </section>
     </div>
