@@ -1,6 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+function LoginFn(e){
+  e.preventDefault();
+}
+
 export default function Login(){
   return(
     <div className="login">
@@ -8,7 +12,7 @@ export default function Login(){
         <Link to={'/'} className="splash-logo">
           <img src="/images/fullLogo.png" alt="" />
         </Link>
-        <form action="post">
+        <form action="post" onSubmit={LoginFn}>
           <input type="email" placeholder="이메일" />
           <input type="password" placeholder="비밀번호" />
           <button type="submit">로그인</button>

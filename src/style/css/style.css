@@ -361,7 +361,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .check {
   width: 100%;
-  margin-top: 2.8rem;
+  margin-top: 3rem;
 }
 .check-inner {
   display: flex;
@@ -411,7 +411,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .suggest {
-  margin-top: 2.8rem;
+  margin-top: 3rem;
 }
 .suggest .section-subtitle {
   display: inline-block;
@@ -483,8 +483,8 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .master {
-  margin-top: 2.8rem;
-  padding-bottom: 100px;
+  margin-top: 3rem;
+  padding-bottom: 8rem;
 }
 .master-list {
   margin-top: 1rem;
