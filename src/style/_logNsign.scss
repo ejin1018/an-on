@@ -1,22 +1,23 @@
-.login{
+.login,.signin{
   @include fullfull;
   @include relativeZero;
-  &-inner{
+  .login-inner,
+  .signin-inner{
     @include fullfull;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .splash-logo{
-    max-width: 38%;
+    max-width: 35%;
     @include absoluteHalf;
-    top: 15%;
     img{
       display: block;
       max-width: 100%;
     }
   }
-  form{
-    @include absoluteHalf;
-    bottom: 35%;
-    width: 85%;
+  .logNsign-form{
+    text-align: center;
     input,button{
       width: 100%;
       padding: 0.9rem 1.2rem;
@@ -35,5 +36,24 @@
       color: #fff;
       background: $mainGreen;
     }
+  }
+}
+
+.login{
+  .splash-logo{
+    top: 15%;
+  }
+  .form-wrap{
+    text-align: center;
+    .go-signin{
+      margin-top: 0.9rem;
+      font-size: 0.88rem;
+      color: $mainGreen;
+    }
+  }
+}
+.signin{
+  .splash-logo{
+    top: 10%;
   }
 }

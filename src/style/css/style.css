@@ -157,52 +157,68 @@ p, h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
-.login {
+.login, .signin {
   width: 100%;
   height: 100%;
   position: relative;
   top: 0;
   left: 0;
 }
-.login-inner {
+.login .login-inner,
+.login .signin-inner, .signin .login-inner,
+.signin .signin-inner {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.login .splash-logo {
-  max-width: 38%;
+.login .splash-logo, .signin .splash-logo {
+  max-width: 35%;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 15%;
 }
-.login .splash-logo img {
+.login .splash-logo img, .signin .splash-logo img {
   display: block;
   max-width: 100%;
 }
-.login form {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 35%;
-  width: 85%;
+.login .logNsign-form, .signin .logNsign-form {
+  text-align: center;
 }
-.login form input, .login form button {
+.login .logNsign-form input, .login .logNsign-form button, .signin .logNsign-form input, .signin .logNsign-form button {
   width: 100%;
   padding: 0.9rem 1.2rem;
   box-sizing: border-box;
   border: 0 none;
   border-radius: 1.5rem;
 }
-.login form input {
+.login .logNsign-form input, .signin .logNsign-form input {
   font-size: 0.9rem;
   margin-bottom: 1rem;
   background: #eee;
 }
-.login form button {
+.login .logNsign-form button, .signin .logNsign-form button {
   font-size: 1rem;
   font-weight: 600;
   color: #fff;
   background: #456250;
+}
+
+.login .splash-logo {
+  top: 15%;
+}
+.login .form-wrap {
+  text-align: center;
+}
+.login .form-wrap .go-signin {
+  margin-top: 0.9rem;
+  font-size: 0.88rem;
+  color: #456250;
+}
+
+.signin .splash-logo {
+  top: 10%;
 }
 
 .botnav-wrap {
