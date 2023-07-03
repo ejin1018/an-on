@@ -1,6 +1,7 @@
 import React,{ useState } from "react";
 import { Link } from "react-router-dom";
-
+import axios from "axios";
+import { API_URL } from "../config/url"
 
 export default function Signin(){
   const [userMail,setUserMail] = useState("");
@@ -22,9 +23,17 @@ export default function Signin(){
   
   const SigninFn = (e)=>{
     e.preventDefault();
-    localStorage.setItem('email',userMail);
-    localStorage.setItem('pw',userPw);
-    localStorage.setItem('nick',userNick);
+    console.log('🍏');
+    axios.post(`${API_URL}/anonuser`,{
+      email:e.target[0].value,
+      password:e.target[1].value,
+      nickname:e.target[3].value
+    })
+    .then((result)=>{
+      console.log(result.data)
+    }).catch((error)=>{
+      console.log("회원가입 실패",error)
+    })
   }
 
   return(
