@@ -23,11 +23,11 @@ export default function Signin(){
   
   const SigninFn = (e)=>{
     e.preventDefault();
-    console.log('🍏');
+
     axios.post(`${API_URL}/anonuser`,{
-      email:e.target[0].value,
-      password:e.target[1].value,
-      nickname:e.target[3].value
+      email:userMail,
+      password:userPw,
+      nickname:userNick
     })
     .then((result)=>{
       console.log(result.data)
@@ -35,6 +35,7 @@ export default function Signin(){
       console.log("회원가입 실패",error)
     })
   }
+
 
   return(
     <div className="signin">
@@ -52,22 +53,31 @@ export default function Signin(){
           <input 
             type="password" 
             placeholder="비밀번호"
-            value={userPw}
             onChange={signPwFn}
+            pattern="^[a-zA-Z0-9]{5,}$"
+            title="영문 + 숫자 5글자 이상"
           />
           <input 
             type="password" 
             placeholder="비밀번호 확인"
-            value={userRepw}
             onChange={signRePwFn}
           />
+          {userPw != userRepw ? 
+          <p className="signin-alert">비밀번호가 일치하지 않습니다</p>
+          :
+          ``
+          }
           <input 
             type="text" 
             placeholder="별명"
             value={userNick}
             onChange={signNickFn}
           />
+          { userMail == "" || userPw == "" || userRepw == "" || userNick == "" ? 
+          <button type="submit" disabled>회원가입</button>
+          :
           <button type="submit">회원가입</button>
+          }
         </form>
       </div>
     </div>

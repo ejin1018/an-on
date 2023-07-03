@@ -195,14 +195,18 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .login .logNsign-form input, .signin .logNsign-form input {
   font-size: 0.9rem;
-  margin-bottom: 1rem;
+  margin: 0.5rem 0;
   background: #eee;
 }
 .login .logNsign-form button, .signin .logNsign-form button {
+  margin-top: 1.5rem;
   font-size: 1rem;
   font-weight: 600;
   color: #fff;
   background: #456250;
+}
+.login .logNsign-form button:disabled, .signin .logNsign-form button:disabled {
+  opacity: 0.3;
 }
 
 .login .splash-logo {
@@ -219,6 +223,18 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .signin .splash-logo {
   top: 10%;
+}
+.signin-alert {
+  padding: 0 1.2rem;
+  text-align: left;
+  font-size: 0.85rem;
+  color: #f55a5a;
+}
+.signin-rcmd {
+  padding: 0 1.2rem;
+  text-align: left;
+  font-size: 0.85rem;
+  color: #67937B;
 }
 
 .botnav-wrap {
