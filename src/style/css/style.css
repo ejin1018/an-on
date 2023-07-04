@@ -230,6 +230,9 @@ p, h1, h2, h3, h4, h5, h6 {
   font-size: 0.85rem;
   color: #f55a5a;
 }
+.signin-alert-off {
+  display: none;
+}
 .signin-rcmd {
   padding: 0 1.2rem;
   text-align: left;
