@@ -1,9 +1,10 @@
 import React,{ useState, useEffect,useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import axios from "axios";
 import { API_URL } from "../config/url"
 
 export default function Signin(){
+  const moveTo = useNavigate();
 
   const [allUser,setAllUser] = useState(null);
 
@@ -19,6 +20,8 @@ export default function Signin(){
   const [userPw,setUserPw] = useState("");
   const [userRepw,setUserRepw] = useState("");
   const [userNick,setUserNick] = useState("");
+  const [acceptMail,setAcceptMail] = useState(false);
+  const [acceptNick,setAcceptNick] = useState(false);
   const mailCheck = useRef();
   const nickCheck = useRef();
 
@@ -27,8 +30,10 @@ export default function Signin(){
     allUser.forEach((eachUser)=>{
       if(e.target.value === eachUser.email){
         mailCheck.current.className = 'signin-alert'
+        setAcceptMail(false);
       }else{
         mailCheck.current.className = 'signin-alert-off'
+        setAcceptMail(true);
       }
     })
   }
@@ -41,12 +46,14 @@ export default function Signin(){
   const signNickFn = (e)=>{
     setUserNick((e.target.value).replace(/\s/g,""));
     allUser.forEach((each)=>{
-      if(userNick === each.nickname){
-        console.log('❌')
-        nickCheck.current.className = 'signin-alert'
-      }else{
+      if(e.target.value != each.nickname){
         console.log('⭕️')
         nickCheck.current.className = 'signin-alert-off'
+        setAcceptNick(true);
+      }else{
+        console.log('❌')
+        nickCheck.current.className = 'signin-alert'
+        setAcceptNick(false);
       }
     })
   }
@@ -62,7 +69,9 @@ export default function Signin(){
       console.log(result.data)
     }).catch((error)=>{
       console.log("회원가입 실패",error)
-    })
+    });
+
+    moveTo("/login");
   }
 
 
@@ -92,11 +101,7 @@ export default function Signin(){
             placeholder="비밀번호 확인"
             onChange={signRePwFn}
           />
-          {userPw != userRepw ? 
-          <p className="signin-alert">비밀번호가 일치하지 않습니다</p>
-          :
-          ``
-          }
+          {userPw != userRepw ? <p className="signin-alert">비밀번호가 일치하지 않습니다</p> : ``}
           <input 
             type="text" 
             placeholder="별명"
@@ -104,7 +109,8 @@ export default function Signin(){
             onChange={signNickFn}
           />
           <p className="signin-alert-off" ref={nickCheck}>이미 사용중인 별명입니다</p>
-          { userMail == "" || userPw == "" || userRepw == "" || userNick == "" ? 
+          { userMail == "" || userPw == "" || userRepw == "" || userNick == "" || acceptMail === false || acceptNick === false
+          ? 
             <button type="submit" disabled>회원가입</button>
           :
             <button type="submit">회원가입</button>
