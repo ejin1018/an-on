@@ -6,7 +6,7 @@ const userInitState = {
   nickname:null,
 }
 
-export default function rootReducer(state = userInitState, action){
+export function rootReducer(state = userInitState, action){
   switch(action.type){
     case LOGIN: return{...action.data};
     case LOGOUT: return {...userInitState};

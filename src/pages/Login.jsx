@@ -1,12 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { loginAction } from "../actions";
 
-
-function LoginFn(e){
-  e.preventDefault();
-}
+// console 확인 용으로 잠시 import 
+import { store } from '../store';
 
 export default function Login(){
+  const dispatch = useDispatch();
+
+  function LoginFn(e){
+    e.preventDefault();
+    console.log('click login button');
+    dispatch(loginAction({email:'one',password:'two',nickname:'three'}));
+    {console.log('클릭 후',store.getState())}
+  }
+
   return(
     <div className="login">
       <div className="login-inner">
