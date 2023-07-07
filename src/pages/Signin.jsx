@@ -27,15 +27,16 @@ export default function Signin(){
 
   const signEmFn = (e)=>{
     setUserMail(e.target.value);
-    allUser.forEach((eachUser)=>{
-      if(e.target.value === eachUser.email){
+    for(let i=0; i<allUser.length; i++){
+      if(e.target.value === allUser[i].email){
         mailCheck.current.className = 'logNsign-form-alert'
         setAcceptMail(false);
+        break;
       }else{
         mailCheck.current.className = 'logNsign-form-alert-off'
         setAcceptMail(true);
       }
-    })
+    }
   }
   const signPwFn = (e)=>{
     setUserPw(e.target.value)
@@ -45,17 +46,16 @@ export default function Signin(){
   }
   const signNickFn = (e)=>{
     setUserNick((e.target.value).replace(/\s/g,""));
-    allUser.forEach((each)=>{
-      if(e.target.value != each.nickname){
-        console.log('⭕️')
-        nickCheck.current.className = 'logNsign-form-alert-off'
-        setAcceptNick(true);
-      }else{
-        console.log('❌')
+    for(let i=0; i<allUser.length; i++){
+      if(e.target.value === allUser[i].nickname){
         nickCheck.current.className = 'logNsign-form-alert'
         setAcceptNick(false);
+        break;
+      }else{
+        nickCheck.current.className = 'logNsign-form-alert-off'
+        setAcceptNick(true);
       }
-    })
+    }
   }
   const SigninFn = (e)=>{
     e.preventDefault();
