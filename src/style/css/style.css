@@ -208,9 +208,24 @@ p, h1, h2, h3, h4, h5, h6 {
 .login .logNsign-form button:disabled, .signin .logNsign-form button:disabled {
   opacity: 0.3;
 }
+.login .logNsign-form-alert, .signin .logNsign-form-alert {
+  padding: 0 1.2rem;
+  text-align: left;
+  font-size: 0.85rem;
+  color: #f55a5a;
+}
+.login .logNsign-form-alert-off, .signin .logNsign-form-alert-off {
+  display: none;
+}
+.login .logNsign-form-rcmd, .signin .logNsign-form-rcmd {
+  padding: 0 1.2rem;
+  text-align: left;
+  font-size: 0.85rem;
+  color: #67937B;
+}
 
 .login .splash-logo {
-  top: 15%;
+  top: 10%;
 }
 .login .form-wrap {
   text-align: center;
@@ -220,24 +235,13 @@ p, h1, h2, h3, h4, h5, h6 {
   font-size: 0.88rem;
   color: #456250;
 }
+.login .logNsign-form-alert {
+  text-align: center;
+  margin-top: 0.5rem;
+}
 
 .signin .splash-logo {
   top: 10%;
-}
-.signin-alert {
-  padding: 0 1.2rem;
-  text-align: left;
-  font-size: 0.85rem;
-  color: #f55a5a;
-}
-.signin-alert-off {
-  display: none;
-}
-.signin-rcmd {
-  padding: 0 1.2rem;
-  text-align: left;
-  font-size: 0.85rem;
-  color: #67937B;
 }
 
 .botnav-wrap {

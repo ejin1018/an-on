@@ -29,10 +29,10 @@ export default function Signin(){
     setUserMail(e.target.value);
     allUser.forEach((eachUser)=>{
       if(e.target.value === eachUser.email){
-        mailCheck.current.className = 'signin-alert'
+        mailCheck.current.className = 'logNsign-form-alert'
         setAcceptMail(false);
       }else{
-        mailCheck.current.className = 'signin-alert-off'
+        mailCheck.current.className = 'logNsign-form-alert-off'
         setAcceptMail(true);
       }
     })
@@ -48,11 +48,11 @@ export default function Signin(){
     allUser.forEach((each)=>{
       if(e.target.value != each.nickname){
         console.log('⭕️')
-        nickCheck.current.className = 'signin-alert-off'
+        nickCheck.current.className = 'logNsign-form-alert-off'
         setAcceptNick(true);
       }else{
         console.log('❌')
-        nickCheck.current.className = 'signin-alert'
+        nickCheck.current.className = 'logNsign-form-alert'
         setAcceptNick(false);
       }
     })
@@ -88,7 +88,7 @@ export default function Signin(){
             value={userMail}
             onChange={signEmFn}
           />
-          <p className="signin-alert-off" ref={mailCheck}>이미 사용중인 메일입니다</p>
+          <p className="logNsign-form-alert-off" ref={mailCheck}>이미 사용중인 메일입니다</p>
           <input 
             type="password" 
             placeholder="비밀번호"
@@ -101,14 +101,14 @@ export default function Signin(){
             placeholder="비밀번호 확인"
             onChange={signRePwFn}
           />
-          {userPw != userRepw ? <p className="signin-alert">비밀번호가 일치하지 않습니다</p> : ``}
+          {userPw != userRepw ? <p className="logNsign-form-alert">비밀번호가 일치하지 않습니다</p> : ``}
           <input 
             type="text" 
             placeholder="별명"
             value={userNick}
             onChange={signNickFn}
           />
-          <p className="signin-alert-off" ref={nickCheck}>이미 사용중인 별명입니다</p>
+          <p className="logNsign-form-alert-off" ref={nickCheck}>이미 사용중인 별명입니다</p>
           { userMail == "" || userPw == "" || userRepw == "" || userNick == "" || acceptMail === false || acceptNick === false
           ? 
             <button type="submit" disabled>회원가입</button>

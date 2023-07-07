@@ -40,12 +40,27 @@
     button:disabled{
       opacity: 0.3;
     }
+    &-alert{
+      padding: 0 1.2rem;
+      text-align: left;
+      font-size: 0.85rem;
+      color: $alertRed;
+      &-off{
+        display: none;
+      }
+    }
+    &-rcmd{
+      padding: 0 1.2rem;
+      text-align: left;
+      font-size: 0.85rem;
+      color: $lightGreen;
+    }
   }
 }
 
 .login{
   .splash-logo{
-    top: 15%;
+    top: 10%;
   }
   .form-wrap{
     text-align: center;
@@ -55,24 +70,13 @@
       color: $mainGreen;
     }
   }
+  .logNsign-form-alert{
+    text-align: center;
+    margin-top: 0.5rem;
+  }
 }
 .signin{
   .splash-logo{
     top: 10%;
-  }
-  &-alert{
-    padding: 0 1.2rem;
-    text-align: left;
-    font-size: 0.85rem;
-    color: $alertRed;
-    &-off{
-      display: none;
-    }
-  }
-  &-rcmd{
-    padding: 0 1.2rem;
-    text-align: left;
-    font-size: 0.85rem;
-    color: $lightGreen;
   }
 }
