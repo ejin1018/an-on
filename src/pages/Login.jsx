@@ -44,7 +44,6 @@ export default function Login(){
     for(let i=0; i<allUser.length; i++){
       if(allUser[i].email == formEm){
         mailCheck.current.className = 'logNsign-form-alert-off'
-
         if(JSON.stringify(allUser[i].password).indexOf(formPw) > 0){
           pwCheck.current.className = 'logNsign-form-alert-off'
         }else if(JSON.stringify(allUser[i].password).indexOf(formPw) == -1){
