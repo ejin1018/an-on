@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Splash from "./pages/Splash";
 import Login from "./pages/Login";
 import Signin from './pages/Signin';
+import Mypage from './pages/Mypage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path='/home' element={<Home/>} />  
           <Route path='/login' element={<Login/>} />  
           <Route path='/signin' element={<Signin/>} />
+          <Route path='/mypage' element={<Mypage/>} />
         </Routes>
       </div>
     </BrowserRouter>

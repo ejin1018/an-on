@@ -45,7 +45,7 @@ export default function Login(){
         if(JSON.stringify(allUser[i].password).indexOf(formPw) > 0){
           pwCheck.current.className = 'logNsign-form-alert-off'
           console.log('⭕️');
-          // movoTo('/home');
+          movoTo('/home');
           dispatch(loginAction({email:formEm,password:formPw,nickname:allUser[i].nickname}));
           break;
         }else if(JSON.stringify(allUser[i].password).indexOf(formPw) == -1){

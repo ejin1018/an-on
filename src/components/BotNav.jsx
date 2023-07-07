@@ -30,7 +30,7 @@ export default function BotNav(){
           </Link>
         </li>
         <li>
-          <Link to={'/home'} className="botnav-btn">
+          <Link to={'/mypage'} className="botnav-btn">
             <img src="/icons/botnav-icon10.png" className="botnav-btn-icon" alt="" />
             <p className="botnav-btn-name">나의 정보</p>
           </Link>
