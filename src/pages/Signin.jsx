@@ -24,6 +24,7 @@ export default function Signin(){
   const [acceptNick,setAcceptNick] = useState(false);
   const mailCheck = useRef();
   const nickCheck = useRef();
+  const repwCheck = useRef();
 
   const signEmFn = (e)=>{
     setUserMail(e.target.value);
@@ -42,7 +43,12 @@ export default function Signin(){
     setUserPw(e.target.value)
   }
   const signRePwFn = (e)=>{
-    setUserRepw(e.target.value)
+    setUserRepw(e.target.value);
+    if(userPw != e.target.value){
+      repwCheck.current.className = 'logNsign-form-alert'
+    }else{
+      repwCheck.current.className = 'logNsign-form-alert-off'
+    }
   }
   const signNickFn = (e)=>{
     setUserNick((e.target.value).replace(/\s/g,""));
@@ -101,7 +107,7 @@ export default function Signin(){
             placeholder="비밀번호 확인"
             onChange={signRePwFn}
           />
-          {userPw != userRepw ? <p className="logNsign-form-alert">비밀번호가 일치하지 않습니다</p> : ``}
+          <p className="logNsign-form-alert-off" ref={repwCheck}>비밀번호가 일치하지 않습니다</p> 
           <input 
             type="text" 
             placeholder="별명"
