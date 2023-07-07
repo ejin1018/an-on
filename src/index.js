@@ -4,14 +4,19 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
-import { store } from './store';
+import { store,persistor } from './store';
+
+// persist
+import { PersistGate } from 'redux-persist/integration/react';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
-      {console.log('초기상태',store.getState())}
+      <PersistGate persistor={persistor} loading={null}>
+        <App />
+        {console.log('초기상태',store.getState())}
+      </PersistGate>
     </Provider>
   </React.StrictMode>
 );

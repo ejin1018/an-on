@@ -1,5 +1,5 @@
 import React,{ useState,useEffect,useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { loginAction } from "../actions";
 import { API_URL } from "../config/url"
@@ -9,6 +9,7 @@ import axios from "axios";
 import { store } from '../store';
 
 export default function Login(){
+  const movoTo = useNavigate();
   const mailCheck = useRef();
   const pwCheck = useRef();
   const dispatch = useDispatch();
@@ -26,6 +27,7 @@ export default function Login(){
   
   function logMailFn(e){
     setLoginEmail(e.target.value)
+    mailCheck.current.className = 'logNsign-form-alert-off';
   }
   function logPwFn(e){
     setLoginPw(e.target.value);
@@ -34,25 +36,28 @@ export default function Login(){
 
   function LoginFn(e){
     e.preventDefault();
-    dispatch(loginAction({email:'one',password:'two',nickname:'three'}));
-    {console.log('클릭 후',store.getState())}
-
     let formEm = e.target[0].value;
     let formPw = e.target[1].value;
-    console.log(formEm,formPw)
 
     for(let i=0; i<allUser.length; i++){
       if(allUser[i].email == formEm){
         mailCheck.current.className = 'logNsign-form-alert-off'
         if(JSON.stringify(allUser[i].password).indexOf(formPw) > 0){
           pwCheck.current.className = 'logNsign-form-alert-off'
+          console.log('⭕️');
+          // movoTo('/home');
+          dispatch(loginAction({email:formEm,password:formPw,nickname:allUser[i].nickname}));
+          break;
         }else if(JSON.stringify(allUser[i].password).indexOf(formPw) == -1){
           pwCheck.current.className = 'logNsign-form-alert'
         }
+        break;
       }else{
         mailCheck.current.className = 'logNsign-form-alert'
       }
     }
+
+    {console.log('클릭 후',store.getState())}
   }
 
   return(
