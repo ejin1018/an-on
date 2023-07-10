@@ -558,4 +558,52 @@ p, h1, h2, h3, h4, h5, h6 {
 .master-list li .master-star {
   margin-top: 0.25rem;
   font-size: 0.8rem;
+}
+
+.mypage section {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.mypage section ul li {
+  margin-bottom: 0.45rem;
+}
+.mypage section ul li a {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #000;
+}
+.mypage-title {
+  margin-bottom: 0.7rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #456250;
+}
+.mypage-profile {
+  padding-top: 20%;
+  padding-bottom: 6%;
+  border-radius: 0 0 1.5rem 1.5rem;
+  background: #67937B;
+}
+.mypage-profile-name {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #fff;
+}
+.mypage-profile button {
+  margin-top: 0.4rem;
+  padding: 0;
+  border: 0 none;
+  font-size: 0.9rem;
+  color: #fff;
+  background: transparent;
+}
+.mypage-calendar, .mypage-myanon, .mypage-notice {
+  padding: 1rem 0;
+  border-bottom: 0.3rem solid rgba(103, 147, 123, 0.5019607843);
+}
+.mypage-myanon ul {
+  margin-left: 0.7rem;
+}
+.mypage-notice {
+  margin-bottom: 8rem;
 }/*# sourceMappingURL=style.css.map */

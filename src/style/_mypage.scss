@@ -1,0 +1,55 @@
+.mypage{
+  section{
+    padding-left: 5%;
+    padding-right: 5%;
+    ul{
+      li{
+        margin-bottom: 0.45rem;
+        a{
+          font-size: 0.95rem;
+          font-weight: 400;
+          color: #000;
+        }
+      }
+    }
+  }
+  &-title{
+    margin-bottom: 0.7rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: $mainGreen;
+  }
+  &-profile{
+    padding-top: 20%;
+    padding-bottom: 6%;
+    border-radius: 0 0 1.5rem 1.5rem ;
+    background: $lightGreen;
+    &-name{
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: #fff;
+    }
+    button{
+      margin-top: 0.4rem;
+      padding: 0;
+      border: 0 none;
+      font-size: 0.9rem;
+      color: #fff;
+      background: transparent;
+    }
+  }
+  &-calendar,
+  &-myanon,
+  &-notice{
+    padding: 1rem 0;
+    border-bottom: 0.3rem solid #67937B80;
+  }
+  &-myanon{
+    ul{
+      margin-left: 0.7rem;
+    }
+  }
+  &-notice{
+    margin-bottom: 8rem;
+  }
+}
