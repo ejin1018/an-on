@@ -606,4 +606,38 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .mypage-notice {
   margin-bottom: 8rem;
+}
+
+.fc-day-sun a {
+  color: #f55a5a;
+}
+
+.fc-day-sat a {
+  color: #448ef5;
+}
+
+.fc-scrollgrid-section-header {
+  display: none;
+}
+
+.fc-theme-standard .fc-scrollgrid,
+.fc-theme-standard td {
+  border: 0 none;
+}
+
+.fc .fc-daygrid-day-top {
+  flex-direction: row;
+}
+.fc .fc-daygrid-day-number {
+  font-size: 0.7rem;
+}
+.fc .fc-event-title {
+  padding: 1px 3px;
+  font-size: 0.7rem;
+}
+.fc .fc-daygrid-event {
+  border-radius: 0.55rem;
+}
+.fc .fc-daygrid-body-natural .fc-daygrid-day-events {
+  margin-bottom: 0.5rem;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,39 @@
+.fc-day-sun{
+  a{
+    color: $alertRed;
+  }
+}
+.fc-day-sat{
+  a{
+    color: #448ef5;
+  }
+}
+.fc-scrollgrid-section-header{
+  display: none;
+}
+.fc-theme-standard{
+  .fc-scrollgrid,
+  td{
+    border: 0 none;
+  }
+}
+.fc{
+  .fc-daygrid-day-top{
+    flex-direction: row;
+  }
+  .fc-daygrid-day-number{
+    font-size: 0.7rem;
+  }
+  .fc-event-title{
+    padding: 1px 3px;
+    font-size: 0.7rem;
+  }
+  .fc-daygrid-event{
+    border-radius: 0.55rem;
+  }
+  .fc-daygrid-body-natural{
+    .fc-daygrid-day-events{
+      margin-bottom: 0.5rem;
+    }
+  } 
+}

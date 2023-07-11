@@ -4,8 +4,7 @@ import Login from "./Login";
 import { logoutAction } from "../actions";
 import { useNavigate,Link } from "react-router-dom";
 import BotNav from "../components/BotNav"
-import FullCalendar from "@fullcalendar/react";
-import dayGridPlugin from '@fullcalendar/daygrid'
+import MyCalendar from "../components/MyCalendar";
 
 export default function Mypage(){
   const user = useSelector(state => state);
@@ -32,17 +31,7 @@ export default function Mypage(){
         </section>
         <section className="mypage-calendar">
           <h3 className="mypage-title">안온 캘린더</h3>
-          <FullCalendar 
-            plugins={[ dayGridPlugin ]}
-            initialView="dayGridMonth"
-            editable={true}
-            selectable={true}
-            locale={'ko'}
-            events={[
-              {title: '관리비 정산', date: '2023-07-10'},
-              {title: '입주 청소', date: '2023-07-13'},
-            ]}
-          />
+          <MyCalendar />
         </section>
         <section className="mypage-myanon">
           <h3 className="mypage-title">나의 안온</h3>
