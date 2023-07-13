@@ -6,6 +6,7 @@ const userInitState = {
   email:null,
   password:null,
   nickname:null,
+  calendar:null,
 }
 
 const persistConfig = {

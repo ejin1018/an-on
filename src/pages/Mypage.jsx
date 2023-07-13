@@ -10,6 +10,7 @@ export default function Mypage(){
   const user = useSelector(state => state);
   const dispatch = useDispatch();
   const moveTo = useNavigate();
+
   function logoutFn(){
     dispatch(logoutAction());
     moveTo('/');
@@ -31,7 +32,7 @@ export default function Mypage(){
         </section>
         <section className="mypage-calendar">
           <h3 className="mypage-title">안온 캘린더</h3>
-          <MyCalendar />
+          <MyCalendar calendar={user.calendar}/>
         </section>
         <section className="mypage-myanon">
           <h3 className="mypage-title">나의 안온</h3>
