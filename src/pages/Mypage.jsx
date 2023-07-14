@@ -16,9 +16,6 @@ export default function Mypage(){
     moveTo('/');
   }
 
-  // 테스트 환경에서는 회원가입 직후 바로 로그인이 되는데
-  // 배포 환경에서는 조회되지 않는 것으로 확인
-
   return(
     <>
       {user.email === null ?
@@ -32,7 +29,7 @@ export default function Mypage(){
         </section>
         <section className="mypage-calendar">
           <h3 className="mypage-title">안온 캘린더</h3>
-          <MyCalendar calendar={user.calendar}/>
+          <MyCalendar user={user}/>
         </section>
         <section className="mypage-myanon">
           <h3 className="mypage-title">나의 안온</h3>
