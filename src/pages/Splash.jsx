@@ -1,29 +1,21 @@
-import {React,useRef,useState,useEffect} from "react";
+import {React,useState,useEffect} from "react";
 import {Link} from "react-router-dom"
 
 function Splash(){
-  let spLogo = useRef();
-  let [loginBlock,setLoginBlock] = useState(false);
+  let [logoBlock,setLogoBlock] = useState(false);
 
   useEffect(()=>{
-    spLogo.current.className = 'splash-logo splash-logo-on'
-    setTimeout(()=>{
-      setLoginBlock(true)
-    },2300)
+    setLogoBlock(true)
   },[])
-
+  
   return(
     <div className="splash-wrap">
       <div className="splash-container">
-        <img ref={spLogo} className="splash-logo" src="/images/fullLogo.png" alt="AnOn Logo" />
-        {loginBlock?
-          <div className="login-box">
+        <img className={logoBlock?'splash-logo splash-logo-on':'splash-logo'} src="/images/fullLogo.png" alt="AnOn Logo" />
+          <div className={logoBlock?'login-box login-box-on':'login-box'}>
             <Link to={'/login'} className="login-btn login-email">이메일로 시작하기</Link>
             <Link to={'/home'} className="not-login">회원가입 없이 먼저 둘러보기</Link>
           </div>
-        :
-        ``
-        }
       </div>
     </div>
     )

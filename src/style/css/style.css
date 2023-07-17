@@ -137,6 +137,11 @@ p, h1, h2, h3, h4, h5, h6 {
   bottom: 15%;
   width: 100%;
   text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s 2.3s;
+}
+.splash-wrap .splash-container .login-box-on {
+  opacity: 1;
 }
 .splash-wrap .splash-container .login-box .login-btn {
   width: 85%;

@@ -22,6 +22,11 @@
       bottom: 15%;
       width: 100%;
       text-align: center;
+      opacity: 0;
+      transition: opacity 0.4s 2.3s;
+      &-on{
+        opacity: 1;
+      }
       .login-btn{
         width: 85%;
         padding: 0.9rem 0;
