@@ -8,14 +8,15 @@ export default function Signin(){
 
   const [allUser,setAllUser] = useState(null);
 
-  useEffect(()=>{
+  const getUserData = ()=>{
     axios.get(`${API_URL}/anonuser`).then((all)=>{
       setAllUser(all.data.anonUser);
     }).catch((err)=>{
       console.log('회원 조회 실패', err)
     })
-  },[])
-  
+  }
+  getUserData();
+
   const [userMail,setUserMail] = useState("");
   const [userPw,setUserPw] = useState("");
   const [userRepw,setUserRepw] = useState("");
@@ -72,7 +73,8 @@ export default function Signin(){
       nickname:userNick
     })
     .then((result)=>{
-      console.log(result.data)
+      console.log(result.data);
+      getUserData();
     }).catch((error)=>{
       console.log("회원가입 실패",error)
     });
