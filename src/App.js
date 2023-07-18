@@ -6,11 +6,13 @@ import Splash from "./pages/Splash";
 import Login from "./pages/Login";
 import Signin from './pages/Signin';
 import Mypage from './pages/Mypage';
+import ScrollTop from './components/ScrollTop';
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
+        <ScrollTop />
         <Routes>
           <Route path='/' element={<Splash/>} />  
           <Route path='/home' element={<Home/>} />  

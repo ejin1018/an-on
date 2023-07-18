@@ -1,12 +1,21 @@
 import React,{ useState, useEffect,useRef } from "react";
-import { Link,useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import { API_URL } from "../config/url"
+import Modal from "../components/Modal";
 
 export default function Signin(){
-  const moveTo = useNavigate();
-
   const [allUser,setAllUser] = useState(null);
+  const [userMail,setUserMail] = useState("");
+  const [userPw,setUserPw] = useState("");
+  const [userRepw,setUserRepw] = useState("");
+  const [userNick,setUserNick] = useState("");
+  const [acceptMail,setAcceptMail] = useState(false);
+  const [acceptNick,setAcceptNick] = useState(false);
+  const [modalOn,setModalOn] = useState(false);
+  const mailCheck = useRef();
+  const nickCheck = useRef();
+  const repwCheck = useRef();
 
   const getUserData = ()=>{
     axios.get(`${API_URL}/anonuser`).then((all)=>{
@@ -15,17 +24,14 @@ export default function Signin(){
       console.log('회원 조회 실패', err)
     })
   }
-  getUserData();
 
-  const [userMail,setUserMail] = useState("");
-  const [userPw,setUserPw] = useState("");
-  const [userRepw,setUserRepw] = useState("");
-  const [userNick,setUserNick] = useState("");
-  const [acceptMail,setAcceptMail] = useState(false);
-  const [acceptNick,setAcceptNick] = useState(false);
-  const mailCheck = useRef();
-  const nickCheck = useRef();
-  const repwCheck = useRef();
+  useEffect(()=>{
+    getUserData();
+    return()=>{
+      setModalOn(false);
+    }
+  },[])
+
 
   const signEmFn = (e)=>{
     setUserMail(e.target.value);
@@ -73,18 +79,21 @@ export default function Signin(){
       nickname:userNick
     })
     .then((result)=>{
-      console.log(result.data);
       getUserData();
+      setModalOn(true);
     }).catch((error)=>{
       console.log("회원가입 실패",error)
+      setModalOn(false);
     });
-
-    moveTo("/login");
   }
-
 
   return(
     <div className="signin">
+      {modalOn?
+        <Modal msg={'회원가입이 완료되었습니다 !'} modalWhere={"/login"} modalBtn={'로그인하기'}/>
+      :
+        ``
+      }
       <div className="signin-inner">
         <Link to={'/'} className="splash-logo">
           <img src="/images/fullLogo.png" alt="" />
