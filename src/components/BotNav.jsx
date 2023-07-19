@@ -3,6 +3,7 @@ import {Link, useMatch} from "react-router-dom"
 
 export default function BotNav(){
   const matchHome = useMatch('/home');
+  const matchBreak = useMatch('/break');
   const matchMypage = useMatch('/mypage');
   return(
     <nav className="botnav-wrap">
@@ -18,8 +19,12 @@ export default function BotNav(){
           </Link>
         </li>
         <li>
-          <Link to={'/home'} className="botnav-btn">
-            <img src="/icons/botnav-hamm-line.png" className="botnav-btn-icon" alt="" />
+          <Link to={'/break'} className="botnav-btn">
+            {matchBreak?
+              <img src="/icons/botnav-hamm-fill.png" className="botnav-btn-icon" alt="" />
+              :
+              <img src="/icons/botnav-hamm-line.png" className="botnav-btn-icon" alt="" />
+            }
             <p className="botnav-btn-name">고&nbsp;&nbsp;장</p>
           </Link>
         </li>

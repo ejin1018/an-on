@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Splash from "./pages/Splash";
 import Login from "./pages/Login";
 import Signin from './pages/Signin';
+import Break from './pages/Break';
 import Mypage from './pages/Mypage';
 import ScrollTop from './components/ScrollTop';
 
@@ -18,6 +19,7 @@ function App() {
           <Route path='/home' element={<Home/>} />  
           <Route path='/login' element={<Login/>} />  
           <Route path='/signin' element={<Signin/>} />
+          <Route path='/break' element={<Break/>} />
           <Route path='/mypage' element={<Mypage/>} />
         </Routes>
       </div>
