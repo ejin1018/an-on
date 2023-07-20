@@ -30,6 +30,28 @@ const offerInfos = [
     companyInfo:'전국 | 최소 견적 16만원 ~'
   },
 ]
+const masterInfos = [
+  {
+    imgUrl:'/images/master-img1.png',
+    masterName:'이혜선',
+    masterStar:'4.8'
+  },
+  {
+    imgUrl:'/images/master-img2.png',
+    masterName:'김광수',
+    masterStar:'4.9'
+  },
+  {
+    imgUrl:'/images/master-img3.png',
+    masterName:'윤현기',
+    masterStar:'4.6'
+  },
+  {
+    imgUrl:'/images/master-img4.png',
+    masterName:'김아름',
+    masterStar:'4.6'
+  },
+]
 
 export default function Home(){
   return(
@@ -168,42 +190,21 @@ export default function Home(){
         <div className="master-inner">
           <h2 className="section-title">우리 동네 설치 기사님 찾아보기</h2>
           <ul className="master-list">
-            <li>
-              <Link to={'/home'}>
-                <div className="master-img-wrap">
-                  <img src="/images/master-img1.png" alt="" />
-                </div>
-                <p className="master-name">이혜선 기사님</p>
-                <p className="master-star">4.8 점</p>
-              </Link>
-            </li>
-            <li>
-              <Link to={'/home'}>
-                <div className="master-img-wrap">
-                  <img src="/images/master-img2.png" alt="" />
-                </div>
-                <p className="master-name">김광수 기사님</p>
-                <p className="master-star">4.9 점</p>
-              </Link>
-            </li>
-            <li>
-              <Link to={'/home'}>
-                <div className="master-img-wrap">
-                  <img src="/images/master-img3.png" alt="" />
-                </div>
-                <p className="master-name">윤현기 기사님</p>
-                <p className="master-star">4.6 점</p>
-              </Link>
-            </li>
-            <li>
-              <Link to={'/home'}>
-                <div className="master-img-wrap">
-                  <img src="/images/master-img4.png" alt="" />
-                </div>
-                <p className="master-name">김아름 기사님</p>
-                <p className="master-star">4.6 점</p>
-              </Link>
-            </li>
+            {
+              masterInfos.map((value,idx)=>{
+                return(
+                  <li key={idx}>
+                    <Link to={'/home'}>
+                      <div className="master-img-wrap">
+                        <img src={value.imgUrl} alt="" />
+                      </div>
+                      <p className="master-name">{value.masterName} 기사님</p>
+                      <p className="master-star">{value.masterStar} 점</p>
+                    </Link>
+                  </li>
+                )
+              })
+            }
           </ul>
         </div>
       </section>
