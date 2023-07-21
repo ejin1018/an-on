@@ -18,7 +18,7 @@ function Splash(){
           </div>
       </div>
     </div>
-    )
+  )
 }
 
 export default Splash;
