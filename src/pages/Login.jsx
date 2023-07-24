@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { loginAction } from "../actions";
 import { API_URL } from "../config/url"
 import axios from "axios";
+import Modal from "../components/Modal";
 
 // console 확인 용으로 잠시 import 
 import { store } from '../store';
@@ -16,6 +17,7 @@ export default function Login(){
   const [allUser,setAllUser] = useState("");
   const [loginEmail,setLoginEmail] = useState("");
   const [loginPw,setLoginPw] = useState("");
+  const [modalOn,setModalOn] = useState(false);
 
   useEffect(()=>{
     axios.get(`${API_URL}/anonuser`).then((all)=>{
@@ -44,9 +46,8 @@ export default function Login(){
         mailCheck.current.className = 'logNsign-form-alert-off'
         if(JSON.stringify(allUser[i].password).indexOf(formPw) > 0){
           pwCheck.current.className = 'logNsign-form-alert-off'
-          console.log('⭕️');
-          movoTo('/home');
           dispatch(loginAction({id:allUser[i].id,email:formEm,password:formPw,nickname:allUser[i].nickname,calendar:allUser[i].calendar}));
+          movoTo('/home');
           break;
         }else if(JSON.stringify(allUser[i].password).indexOf(formPw) == -1){
           pwCheck.current.className = 'logNsign-form-alert'
@@ -56,12 +57,20 @@ export default function Login(){
         mailCheck.current.className = 'logNsign-form-alert'
       }
     }
-
     {console.log('클릭 후',store.getState())}
+  }
+
+  function goSigninFn(){
+    setModalOn(true);
   }
 
   return(
     <div className="login">
+      {modalOn?
+        <Modal msg={`프로젝트 테스트용이니, 평소 사용하지 않는 아이디와 비밀번호로 가입하실 것을 추천드립니다!`} modalWhere={'/signin'} modalBtn={'알겠습니다!'} />
+      :
+        ``
+      }
       <div className="login-inner">
         <Link to={'/'} className="splash-logo">
           <img src="/images/fullLogo.png" alt="" />
@@ -83,7 +92,7 @@ export default function Login(){
             <p className="logNsign-form-alert-off" ref={mailCheck}>조회되지 않는 이메일입니다</p>
             <p className="logNsign-form-alert-off" ref={pwCheck}>비밀번호를 확인하세요</p> 
             {loginEmail == "" || loginPw == ""?<button type="submit" disabled>로그인</button>:<button type="submit">로그인</button>}
-            <Link to={'/signin'} className="go-signin">회원가입</Link>
+            <Link className="go-signin" onClick={goSigninFn}>회원가입</Link>
           </form>
         </div>
       </div>
