@@ -1,0 +1,30 @@
+.break{
+  &-inner{
+    height: 100vh;
+    .section-title{
+      padding-top: 65%;
+      margin-bottom: 6%;
+      font-size: 1.65rem;
+      opacity: 0;
+      transition: opacity 1s, padding-top .6s .6s;
+    }
+    .break-what{
+      width: 30%;
+      padding: 0.5rem;
+      border: 0 none;
+      border-bottom: 2px solid $mainGreen;
+      font-size: 1.1rem;
+      opacity: 0;
+      transition: opacity .4s 1s;
+    }
+    &-on{
+      .section-title{
+        opacity: 1;
+        padding-top: 55%;
+      }
+      .break-what{
+        opacity: 1;
+      }
+    }
+  }
+}
