@@ -610,6 +610,11 @@ p, h1, h2, h3, h4, h5, h6 {
   font-size: 1.1rem;
 }
 
+.break {
+  position: relative;
+  top: 0;
+  left: 0;
+}
 .break-inner {
   height: 100vh;
 }
@@ -670,6 +675,18 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .break-inner-on .break-one-depth {
   opacity: 1;
+}
+.break-next {
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 90%;
+  height: 100vh;
+  background: #fff;
+  transition: right 0.4s;
+}
+.break-next-on {
+  right: 0;
 }
 
 .mypage section {

@@ -6,10 +6,12 @@ const breakBoiler = ['브랜드','경서나비엔','림나이','두꺼비','소�
 
 export default function Break(){
   const submitBtn = useRef();
+  const breakNext = useRef();
   const [breakOn,setBreakOn] = useState(false);
   const [boilerBrand,setBoilerBrand] = useState(false);
   const [fixLocation,setFixLocation] = useState(false);
   const [mappingThis, setMappingThis] = useState([]);
+  const [submitThing,setSubmitThing] = useState([]);
   
   useEffect(()=>{
     setBreakOn(true)
@@ -42,8 +44,13 @@ export default function Break(){
 
   const breakSubmitFn = (e)=>{
     e.preventDefault();
-    console.log(e.target[0].value)
-    console.log(e.target[1].value)
+    console.log(e)
+    breakNext.current.className = 'break-next break-next-on'
+    setSubmitThing([e.target[0].value,e.target[1].value])
+  }
+  
+  const beforeBtnFn = ()=>{
+    breakNext.current.className = 'break-next'
   }
 
   return(
@@ -77,9 +84,14 @@ export default function Break(){
           </select>
           <button type="submit" ref={submitBtn} className="break-submit-btn">다음</button>
         </form>
-          {/* <div className="break-detail">
-            <textarea name="break-detail-content" id="break-what-detail" cols="30" rows="10" ></textarea>
-          </div> */}
+      </div>
+      <div ref={breakNext} className="break-next">
+        <div className="break-next-inner">
+          <p>{submitThing[0]}</p>
+          <p>{submitThing[1]}</p>
+          <textarea name="break-detail-content" id="break-what-detail" cols="30" rows="10" ></textarea>
+          <button onClick={beforeBtnFn}>이전</button>
+        </div>
       </div>
     </div>
   )

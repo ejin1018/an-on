@@ -6,6 +6,7 @@
   font-size: 1.1rem;
 }
 .break{
+  @include relativeZero;
   &-inner{
     height: 100vh;
     .section-title{
@@ -67,6 +68,18 @@
       .break-one-depth{
         opacity: 1;
       }
+    }
+  }
+  &-next{
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 90%;
+    height: 100vh;
+    background: #fff;
+    transition: right .4s;
+    &-on{
+      right: 0;
     }
   }
 }

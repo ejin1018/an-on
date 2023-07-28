@@ -19,7 +19,7 @@ export default function BotNav(){
           </Link>
         </li>
         <li>
-          <Link to={'/break'} className="botnav-btn">
+          <Link to={'/home'} className="botnav-btn">
             {matchBreak?
               <img src="/icons/botnav-hamm-fill.png" className="botnav-btn-icon" alt="" />
               :
