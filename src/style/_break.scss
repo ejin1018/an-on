@@ -1,3 +1,10 @@
+%break-select {
+  min-width: 30%;
+  padding: 0.5rem;
+  border: 0 none;
+  border-bottom: 2px solid $lightGreen;
+  font-size: 1.1rem;
+}
 .break{
   &-inner{
     height: 100vh;
@@ -8,21 +15,56 @@
       opacity: 0;
       transition: opacity 1s, padding-top .6s .6s;
     }
-    .break-what{
-      width: 30%;
-      padding: 0.5rem;
-      border: 0 none;
-      border-bottom: 2px solid $mainGreen;
-      font-size: 1.1rem;
+    .break-one-depth{
+      @extend %break-select;
       opacity: 0;
       transition: opacity .4s 1s;
+    }
+    .break-two-depth{
+      @extend %break-select;
+      margin-left: 2.5rem;
+      opacity: 0;
+      transition: opacity .3s, margin-left .3s .2s;
+      &-on{
+        margin-left: 1.5rem;
+        opacity: 1;
+      }
+    }
+    .break-submit-btn{
+      @include relativeZero;
+      display: block;
+      margin-top: 10%;
+      padding: 0.6rem 1.8rem 0.6rem 0.8rem ;
+      border: 0 none;
+      border-radius: 1.2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #fff;
+      background: $mainGreen;
+      opacity: 0;
+      transition: opacity .3s, margin-top .3s .2s;
+      &::after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0.8rem;
+        transform: translateY(-62%) rotate(45deg);
+        width: 0.4rem;
+        height: 0.4rem;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+      }
+      &-on{
+        opacity: 1;
+        margin-top: 6%;
+      }
     }
     &-on{
       .section-title{
         opacity: 1;
         padding-top: 55%;
       }
-      .break-what{
+      .break-one-depth{
         opacity: 1;
       }
     }
