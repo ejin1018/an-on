@@ -7,12 +7,14 @@
 }
 .break{
   @include relativeZero;
+  overflow: hidden;
   &-inner{
     height: 100vh;
     .section-title{
       padding-top: 65%;
-      margin-bottom: 6%;
+      margin-bottom: 1.2rem;
       font-size: 1.65rem;
+      font-weight: 600;
       opacity: 0;
       transition: opacity 1s, padding-top .6s .6s;
     }
@@ -31,10 +33,31 @@
         opacity: 1;
       }
     }
+    .break-detail{
+      margin-top: 1.8rem;
+      opacity: 0;
+      transition: opacity .6s .6s;
+      &-on{
+        opacity: 1;
+      }
+      &-suggest{
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: $mainGreen;
+        margin-bottom: 0.5rem;
+      }
+      textarea{
+        resize: none;
+        width: 100%;
+        border: 2px solid $lightGreen;
+        border-radius: 0.5rem;
+        box-sizing: border-box;
+      }
+    }
     .break-submit-btn{
       @include relativeZero;
       display: block;
-      margin-top: 10%;
+      margin-top: 2.3rem;
       padding: 0.6rem 1.8rem 0.6rem 0.8rem ;
       border: 0 none;
       border-radius: 1.2rem;
@@ -57,29 +80,20 @@
       }
       &-on{
         opacity: 1;
-        margin-top: 6%;
+        margin-top: 1.8rem;
       }
     }
     &-on{
       .section-title{
         opacity: 1;
         padding-top: 55%;
+        &-on{
+          padding-top: 35%;
+        }
       }
       .break-one-depth{
         opacity: 1;
       }
-    }
-  }
-  &-next{
-    position: absolute;
-    top: 0;
-    right: -100%;
-    width: 90%;
-    height: 100vh;
-    background: #fff;
-    transition: right .4s;
-    &-on{
-      right: 0;
     }
   }
 }
