@@ -7,6 +7,8 @@ import Login from "./pages/Login";
 import Signin from './pages/Signin';
 import Break from './pages/Break';
 import Mypage from './pages/Mypage';
+import Living from './pages/Living';
+import BotNav from './components/BotNav';
 import ScrollTop from './components/ScrollTop';
 
 function App() {
@@ -14,6 +16,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <ScrollTop />
+        <BotNav />
         <Routes>
           <Route path='/' element={<Splash/>} />  
           <Route path='/home' element={<Home/>} />  
@@ -21,6 +24,7 @@ function App() {
           <Route path='/signin' element={<Signin/>} />
           <Route path='/break' element={<Break/>} />
           <Route path='/mypage' element={<Mypage/>} />
+          <Route path='/living' element={<Living/>} />
         </Routes>
       </div>
     </BrowserRouter>

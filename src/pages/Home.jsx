@@ -1,6 +1,5 @@
 import React from "react";
 import {Link} from "react-router-dom"
-import BotNav from "../components/BotNav";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -56,7 +55,6 @@ const masterInfos = [
 export default function Home(){
   return(
     <div className="home-wrap">
-      <BotNav />
       <section className="intro">
         <div className="intro-container">
           <p className="intro-subtitle">원인 모를 고장, 미루게 되는 교체 ...</p>

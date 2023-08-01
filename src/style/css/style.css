@@ -325,7 +325,7 @@ p, h1, h2, h3, h4, h5, h6 {
   position: relative;
   top: 0;
   left: 0;
-  margin-bottom: 18%;
+  margin-bottom: 25%;
 }
 .intro-container {
   padding: 17% 5%;
@@ -443,7 +443,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .check {
   width: 100%;
-  margin-top: 3rem;
+  margin-top: 4rem;
 }
 .check-inner {
   display: flex;
@@ -493,7 +493,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .suggest {
-  margin-top: 3rem;
+  margin-top: 4rem;
 }
 .suggest .section-subtitle {
   display: inline-block;
@@ -565,7 +565,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .master {
-  margin-top: 3rem;
+  margin-top: 4rem;
   padding-bottom: 8rem;
 }
 .master-list {

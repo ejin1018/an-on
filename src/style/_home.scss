@@ -1,6 +1,6 @@
 .intro{
   @include relativeZero;
-  margin-bottom: 18%;
+  margin-bottom: 25%;
   &-container{
     padding:17% 5%;
     background: $deepGreen;
@@ -113,7 +113,7 @@
 }
 .check{
   width: 100%;
-  margin-top: 3rem;
+  margin-top: 4rem;
   &-inner{
     display: flex;
     justify-content: space-between;
@@ -160,7 +160,7 @@
   }
 }
 .suggest{
-  margin-top: 3rem;
+  margin-top: 4rem;
   .section-subtitle{
     display: inline-block;
   }
@@ -226,7 +226,7 @@
   }
 }
 .master{
-  margin-top: 3rem;
+  margin-top: 4rem;
   padding-bottom: 8rem;
   &-list{
     margin-top: 1rem;

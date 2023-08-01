@@ -29,7 +29,7 @@ export default function BotNav(){
           </Link>
         </li>
         <li>
-          <Link to={'/home'} className="botnav-btn">
+          <Link to={'/living'} className="botnav-btn">
             <img src="/icons/botnav-brush-line.png" className="botnav-btn-icon" alt="" />
             <p className="botnav-btn-name">생&nbsp;&nbsp;활</p>
           </Link>

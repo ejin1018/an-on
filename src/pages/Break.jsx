@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
-import BotNav from "../components/BotNav";
 import Modal from "../components/Modal";
 import Login from "./Login";
 
@@ -73,7 +72,6 @@ export default function Break(){
         <div className="break">
           {boilerModal && <Modal msg={'해당 브랜드에 고장을 접수했습니다. \n 3-5일 내 브랜드에서 확인 후 기사님이 배정됩니다!'} modalWhere={'/home'} modalBtn={'접수 완료'}/>}
           {locationModal && <Modal msg={`해당 지역에 있는 기사님들께 고장을 접수했습니다. \n 3-5일 내 견적서가 도착합니다!`} modalWhere={'/home'} modalBtn={'접수 완료'}/>}
-          <BotNav />
           <div className={breakOn?'break-inner-on break-inner':'break-inner'}>
             <h3 ref={breakTitle} className="section-title">무엇이 고장났나요?</h3>
             <form action="get" onSubmit={breakSubmitFn}>

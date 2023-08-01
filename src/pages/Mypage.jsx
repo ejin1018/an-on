@@ -3,7 +3,6 @@ import { useSelector,useDispatch } from "react-redux";
 import Login from "./Login";
 import { logoutAction } from "../actions";
 import { useNavigate,Link } from "react-router-dom";
-import BotNav from "../components/BotNav"
 import MyCalendar from "../components/MyCalendar";
 
 export default function Mypage(){
@@ -22,7 +21,6 @@ export default function Mypage(){
         <Login />
       : (
       <div className="mypage">
-        <BotNav />
         <section className="mypage-profile">
           <h2 className="mypage-profile-name">{user.nickname} 님의 마이페이지</h2>
           <button onClick={logoutFn}>로그아웃</button>
