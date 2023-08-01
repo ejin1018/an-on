@@ -4,6 +4,7 @@
   border: 0 none;
   border-bottom: 2px solid $lightGreen;
   font-size: 1.1rem;
+  background: transparent;
 }
 .break{
   @include relativeZero;
