@@ -139,7 +139,8 @@ p, h1, h2, h3, h4, h5, h6 {
   background: #456250;
 }
 .modal-msg {
-  margin-bottom: 2.5rem;
+  width: 90%;
+  margin: 0 auto 2.5rem;
   font-size: 1.05rem;
   font-weight: 400;
   color: #456250;

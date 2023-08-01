@@ -74,7 +74,7 @@ export default function Home(){
           <SwiperSlide>
             <div className="service">
               <p className="service-title">보일러 고장</p>
-              <Link to={'/home'} className="service-receipt">고장 접수하기</Link>
+              <Link to={'/break'} className="service-receipt">고장 접수하기</Link>
               <div className="service-icon service-icon-vert">
                 <img src="/icons/service-icon1.png" alt="" />
               </div>
@@ -82,8 +82,17 @@ export default function Home(){
           </SwiperSlide>
           <SwiperSlide>
             <div className="service">
+              <p className="service-title">전기 고장</p>
+              <Link to={'/break'} className="service-receipt">고장 접수하기</Link>
+              <div className="service-icon service-icon-rect">
+                <img src="/icons/service-icon3.png" alt="" />
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="service">
               <p className="service-title">수도 고장</p>
-              <Link to={'/home'} className="service-receipt">고장 접수하기</Link>
+              <Link to={'/break'} className="service-receipt">고장 접수하기</Link>
               <div className="service-icon service-icon-rect">
                 <img src="/icons/service-icon2.png" alt="" />
               </div>
@@ -91,10 +100,10 @@ export default function Home(){
           </SwiperSlide>
           <SwiperSlide>
             <div className="service">
-              <p className="service-title">전기 고장</p>
-              <Link to={'/home'} className="service-receipt">고장 접수하기</Link>
-              <div className="service-icon service-icon-rect">
-                <img src="/icons/service-icon3.png" alt="" />
+              <p className="service-title">가전 고장</p>
+              <Link to={'/break'} className="service-receipt">고장 접수하기</Link>
+              <div className="service-icon service-icon-vert">
+                <img src="/icons/service-icon4.png" alt="" />
               </div>
             </div>
           </SwiperSlide>
