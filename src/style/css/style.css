@@ -422,7 +422,7 @@ p, h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  padding: 0.5rem;
+  padding: 0.8rem;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -432,12 +432,12 @@ p, h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 .offer-slide .swiper-slide .offer-company-name {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 .offer-slide .swiper-slide .offer-company-info {
-  margin-top: 0.1rem;
-  font-size: 0.6rem;
+  margin-top: 0.2rem;
+  font-size: 0.65rem;
   font-weight: 400;
 }
 
@@ -703,6 +703,85 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .break-inner-on .break-one-depth {
   opacity: 1;
+}
+
+.living {
+  padding-bottom: 100px;
+}
+.living-point {
+  display: block;
+  margin-top: 1.5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.living-point-silicon {
+  background: url("../../public/images/living-point1.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.living-point-wood {
+  background: url("../../public/images/living-point2.png") no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}
+.living-point-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: baseline;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 5rem 1rem 1.3rem;
+  background: linear-gradient(transparent, #274C58);
+}
+.living-point-text .category {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 400;
+  padding-bottom: 0.2rem;
+  margin-bottom: 0.3rem;
+  color: #fff;
+  border-bottom: solid 0.5px #fff;
+}
+.living-point-text .name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+}
+.living-point-text .what {
+  margin-top: 0.2rem;
+  font-size: 0.8rem;
+  color: #fff;
+}
+.living-special {
+  margin-top: 2.6rem;
+}
+.living-special-title {
+  color: #274C58;
+  margin-bottom: 0.8rem;
+}
+.living-special-blocks {
+  display: flex;
+  justify-content: space-between;
+}
+.living-special-blocks .special-block {
+  width: 48%;
+  height: 18rem;
+}
+.living-special-blocks .special-block img {
+  width: 100%;
+  height: 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.8rem;
+}
+.living-special-blocks .special-block p {
+  color: #000;
+}
+.living-special-blocks .special-block p b {
+  color: #F6C915;
+  font-weight: 600;
 }
 
 .mypage section {
