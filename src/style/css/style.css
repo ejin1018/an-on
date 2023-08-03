@@ -560,8 +560,8 @@ p, h1, h2, h3, h4, h5, h6 {
 .suggest-items li a .suggest-img-wrap img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .master {
@@ -754,12 +754,12 @@ p, h1, h2, h3, h4, h5, h6 {
   font-size: 0.8rem;
   color: #fff;
 }
+.living-title {
+  color: #274C58;
+  margin-bottom: 1rem;
+}
 .living-special {
   margin-top: 2.6rem;
-}
-.living-special-title {
-  color: #274C58;
-  margin-bottom: 0.8rem;
 }
 .living-special-blocks {
   display: flex;
@@ -782,6 +782,67 @@ p, h1, h2, h3, h4, h5, h6 {
 .living-special-blocks .special-block p b {
   color: #F6C915;
   font-weight: 600;
+}
+.living-shop {
+  margin-top: 2.6rem;
+}
+.living-shop .living-product {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.living-shop .living-product li {
+  width: 48%;
+  margin-bottom: 0.8rem;
+}
+.living-shop .living-product li a {
+  display: block;
+}
+.living-shop .living-product li a:focus img, .living-shop .living-product li a:hover img {
+  transform: scale(1.1);
+  transform-origin: center;
+  transition: all 0.4s;
+}
+.living-shop .living-product li a img {
+  display: block;
+  width: 65%;
+  margin: 0 auto 0.2rem;
+}
+.living-shop .living-product li a p {
+  margin-bottom: 0.2rem;
+}
+.living-shop .living-product-brand {
+  font-size: 0.8rem;
+  color: #aaaaaa;
+}
+.living-shop .living-product-name {
+  font-size: 0.9rem;
+  color: #000;
+}
+.living-shop .living-product-price {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000;
+}
+.living-shop .living-product-price b {
+  color: #F6C915;
+  margin-right: 0.35rem;
+}
+.living-shop .living-product-badge {
+  display: inline-block;
+  margin-right: 0.35rem;
+  padding: 0.1rem 0.25rem;
+  border-radius: 0.3rem;
+  font-size: 0.7rem;
+}
+.living-shop .living-product-badge-free {
+  color: #000;
+  background: #EADFCD;
+}
+.living-shop .living-product-badge-sale {
+  color: #000;
+  background: #F6C915;
 }
 
 .mypage section {

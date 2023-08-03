@@ -46,12 +46,12 @@
       }
     }
   }
+  &-title{
+    color: $deepGreen;
+    margin-bottom: 1rem;
+  }
   &-special{
     margin-top: 2.6rem;
-    &-title{
-      color: $deepGreen;
-      margin-bottom: 0.8rem;
-    }
     &-blocks{
       display: flex;
       justify-content: space-between;
@@ -74,5 +74,67 @@
       }
     }
   }
-  
+  &-shop{
+    margin-top: 2.6rem;
+    .living-product{
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      li{
+        width: 48%;
+        margin-bottom: 0.8rem;
+        a{
+          display: block;
+          &:focus, &:hover{
+            img{
+              transform: scale(1.1);
+              transform-origin: center;
+              transition: all .4s;
+            }
+          }
+          img{
+            display: block;
+            width: 65%;
+            margin: 0 auto 0.2rem;
+          }
+          p{
+            margin-bottom: 0.2rem;
+          }
+        }
+      }
+      &-brand{
+        font-size: 0.8rem;
+        color: #aaaaaa;
+      }
+      &-name{
+        font-size: 0.9rem;
+        color: #000;
+      }
+      &-price{
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #000;
+        b{
+          color: $pointColor;
+          margin-right: 0.35rem;
+        }
+      }
+      &-badge{
+        display: inline-block;
+        margin-right: 0.35rem;
+        padding: 0.1rem 0.25rem;
+        border-radius: 0.3rem;
+        font-size: 0.7rem;
+        &-free{
+          color: #000;
+          background: $baseColor;
+        }
+        &-sale{
+          color: #000;
+          background: $pointColor;
+        }
+      }
+    }
+  }
 }

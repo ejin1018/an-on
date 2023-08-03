@@ -161,7 +161,7 @@ export default function Home(){
             <li>
               <Link to={'/home'}>
                 <div className="suggest-img-wrap">
-                  <img src="/images/door-lock1.jpg" alt="" />
+                  <img src="/images/door-lock1.png" alt="" />
                 </div>
                 <p className="suggest-items-name">기본형</p>
               </Link>
@@ -169,7 +169,7 @@ export default function Home(){
             <li>
               <Link to={'/home'}>
                 <div className="suggest-img-wrap">
-                  <img src="/images/door-lock2.jpg" alt="" />
+                  <img src="/images/door-lock2.png" alt="" />
                 </div>
                 <p className="suggest-items-name">체인형</p>
               </Link>
@@ -177,7 +177,7 @@ export default function Home(){
             <li>
               <Link to={'/home'}>
                 <div className="suggest-img-wrap">
-                  <img src="/images/door-lock3.jpg" alt="" />
+                  <img src="/images/door-lock3.png" alt="" />
                 </div>
                 <p className="suggest-items-name">보조잠금</p>
               </Link>
@@ -185,7 +185,7 @@ export default function Home(){
             <li>
               <Link to={'/home'}>
                 <div className="suggest-img-wrap">
-                  <img src="/images/door-lock4.jpg" alt="" />
+                  <img src="/images/door-lock4.png" alt="" />
                 </div>
                 <p className="suggest-items-name">기타</p>
               </Link>
