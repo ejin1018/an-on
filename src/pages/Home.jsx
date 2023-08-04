@@ -1,11 +1,12 @@
-import React from "react";
+import React,{ useState } from "react";
 import {Link} from "react-router-dom"
+import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import MasterInfo from "../components/MasterInfo";
 
 import "swiper/css";
 import "swiper/css/pagination";
 
-import { Pagination } from "swiper";
 
 const offerInfos = [
   {
@@ -53,6 +54,13 @@ const masterInfos = [
 ]
 
 export default function Home(){
+  const [masterPop,setMasterPop] = useState(false);
+  function masterPopFn(e){
+    setMasterPop(true);
+    // console.log(e.target.nextElementSibling.children[0].attributes[0].value);
+    // console.log(e.target.nextElementSibling.nextElementSibling.innerText);
+    // console.log(e.target.nextElementSibling.nextElementSibling.nextElementSibling.innerText)
+  }
   return(
     <div className="home-wrap">
       <section className="intro">
@@ -196,18 +204,18 @@ export default function Home(){
       <section className="master">
         <div className="master-inner">
           <h2 className="section-title">우리 동네 설치 기사님 찾아보기</h2>
+          {/* {masterPop && <MasterInfo />} */}
           <ul className="master-list">
             {
               masterInfos.map((value,idx)=>{
                 return(
-                  <li key={idx}>
-                    <Link to={'/home'}>
-                      <div className="master-img-wrap">
-                        <img src={value.imgUrl} alt="" />
-                      </div>
-                      <p className="master-name">{value.masterName} 기사님</p>
-                      <p className="master-star">{value.masterStar} 점</p>
-                    </Link>
+                  <li key={idx} onClick={masterPopFn}>
+                    <div className="click-cover"></div>
+                    <div className="master-img-wrap">
+                      <img src={value.imgUrl} alt="" />
+                    </div>
+                    <p className="master-name">{value.masterName} 기사님</p>
+                    <p className="master-star">{value.masterStar} 점</p>
                   </li>
                 )
               })

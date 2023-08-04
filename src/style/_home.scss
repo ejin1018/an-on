@@ -234,7 +234,17 @@
     justify-content: space-between;
     align-items: center;
     li{
+      @include relativeZero;
       max-width: 20%;
+      .click-cover{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        background: transparent;
+      }
       .master-img-wrap{
         width: 5rem;
         height: 5rem;
