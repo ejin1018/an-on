@@ -4,6 +4,7 @@ import Login from "./Login";
 import { logoutAction } from "../actions";
 import { useNavigate,Link } from "react-router-dom";
 import MyCalendar from "../components/MyCalendar";
+import BotNav from "../components/BotNav"
 
 export default function Mypage(){
   const user = useSelector(state => state);
@@ -21,6 +22,7 @@ export default function Mypage(){
         <Login />
       : (
       <div className="mypage">
+        <BotNav />
         <section className="mypage-profile">
           <h2 className="mypage-profile-name">{user.nickname} 님의 마이페이지</h2>
           <button onClick={logoutFn}>로그아웃</button>

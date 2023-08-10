@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import Modal from "../components/Modal";
 import Login from "./Login";
+import BotNav from "../components/BotNav"
 
 const breakWhere = ['지역','서울','경기','강원','충청','전라','경상'];
 const breakBoiler = ['브랜드','경서나비엔','림나이','두꺼비','소성셀틱','예스라인'];
@@ -70,6 +71,7 @@ export default function Break(){
         <Login />
       : (
         <div className="break">
+          <BotNav />
           {boilerModal && <Modal msg={'해당 브랜드에 고장을 접수했습니다. \n 3-5일 내 브랜드에서 확인 후 기사님이 배정됩니다!'} modalWhere={'/home'} modalBtn={'접수 완료'}/>}
           {locationModal && <Modal msg={`해당 지역에 있는 기사님들께 고장을 접수했습니다. \n 3-5일 내 견적서가 도착합니다!`} modalWhere={'/home'} modalBtn={'접수 완료'}/>}
           <div className={breakOn?'break-inner-on break-inner':'break-inner'}>

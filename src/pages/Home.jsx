@@ -3,6 +3,7 @@ import {Link} from "react-router-dom"
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import MasterInfo from "../components/MasterInfo";
+import BotNav from "../components/BotNav"
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -63,6 +64,7 @@ export default function Home(){
   }
   return(
     <div className="home-wrap">
+      <BotNav />
       <section className="intro">
         <div className="intro-container">
           <p className="intro-subtitle">원인 모를 고장, 미루게 되는 교체 ...</p>

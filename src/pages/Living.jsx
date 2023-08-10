@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import BotNav from "../components/BotNav"
 
 export default function Living(){
   return(
     <div className="living">
+      <BotNav />
       <div className="living-inner">
         <Link to={'/living'} className="living-point living-point-silicon">
           <div className="living-point-text">
