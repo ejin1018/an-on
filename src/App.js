@@ -6,6 +6,7 @@ import Splash from "./pages/Splash";
 import Login from "./pages/Login";
 import Signin from './pages/Signin';
 import Break from './pages/Break';
+import Moving from './pages/Moving';
 import Mypage from './pages/Mypage';
 import Living from './pages/Living';
 import ScrollTop from './components/ScrollTop';
@@ -21,6 +22,7 @@ function App() {
           <Route path='/login' element={<Login/>} />  
           <Route path='/signin' element={<Signin/>} />
           <Route path='/break' element={<Break/>} />
+          <Route path='/moving' element={<Moving/>} />
           <Route path='/mypage' element={<Mypage/>} />
           <Route path='/living' element={<Living/>} />
         </Routes>
