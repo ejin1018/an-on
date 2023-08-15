@@ -6,6 +6,7 @@ export default function BotNav(){
   const matchBreak = useMatch('/break');
   const matchLiving = useMatch('/living')
   const matchMypage = useMatch('/mypage');
+  const matchMoving = useMatch('/moving');
   return(
     <nav className="botnav-wrap">
       <ul className="botnav-container">
@@ -41,8 +42,13 @@ export default function BotNav(){
           </Link>
         </li>
         <li>
-          <Link to={'/home'} className="botnav-btn">
-            <img src="/icons/botnav-move-line.png" className="botnav-btn-icon" alt="" />
+          <Link to={'/moving'} className="botnav-btn">
+            {
+              matchMoving?
+              <img src="/icons/botnav-move-fill.png" className="botnav-btn-icon" alt="" />
+              :
+              <img src="/icons/botnav-move-line.png" className="botnav-btn-icon" alt="" />
+            }
             <p className="botnav-btn-name">이&nbsp;&nbsp;사</p>
           </Link>
         </li>
