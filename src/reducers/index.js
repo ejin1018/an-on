@@ -8,6 +8,7 @@ const userInitState = {
   password:null,
   nickname:null,
   calendar:null,
+  movingday:null,
 }
 
 const persistConfig = {
