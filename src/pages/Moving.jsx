@@ -2,10 +2,28 @@ import { useEffect,useState } from "react";
 import { useSelector } from "react-redux";
 import BotNav from "../components/BotNav";
 import axios from "axios";
-import Login from "./Login";
+import { API_URL } from "../config/url"
 
 export default function Moving(){
   const user = useSelector(state => state);
+  const [userInfo,setUserInfo] = useState('');
+  const [movingForm,setMovingForm] = useState(false);
+
+  const getUserInfo = ()=>{
+    axios.get(`${API_URL}/anonuser/${user.id}`).then((userInfo)=>{
+      setUserInfo(userInfo.data.anonUser)
+    }).catch((err)=>{
+      console.log('회원 조회 실패', err)
+    })
+  }
+
+  useEffect(()=>{
+    getUserInfo()
+  },[])
+  useEffect(()=>{
+    getUserInfo()
+  },[userInfo])
+
   const today = new Date();
   const standYear = Number(today.getFullYear());
   const [form,setForm] = useState({
@@ -52,19 +70,33 @@ export default function Moving(){
 
   const movingdaySubmitFn = (e)=>{
     e.preventDefault();
-    console.log(form)
+    axios.post(`${API_URL}/anonuser/${user.id}`,{
+      movingday:`${form.year}년 ${form.month}월 ${form.day} 일`
+    }).then((result)=>{
+      console.log('이삿날 등록 성공',result)
+    }).catch((err)=>{
+      console.log('이삿날 등록 실패',err)
+    })
   }
   return(
-    <>
-      {user.email === null?
-        <Login />
-      :
-      <div className="moving">
-        <BotNav />
-          {/* 회원 개인 정보에 movingDay 데이터가 비어있으면 my-moving-day 팝업 */}
-          <section className="my-moving-day">
-            <h3 className="section-title">나의 이삿날은</h3>
-
+    <div className="moving">
+      <BotNav />
+        {/* 회원 개인 정보에 movingDay 데이터가 비어있으면 my-moving-day 팝업 */}
+        {/* <p> 오늘 getDate 랑 계산해서 d- 남았습니다 보여주기</p> */}
+        <section className="my-moving-day">
+          <h3 className="section-title">나의 이삿날은</h3>
+          {userInfo.movingday == null?
+            <div className="my-moving-day-text">
+              <p>아직 등록되지 않았습니다</p>
+              <button onClick={()=>{setMovingForm(true)}}>등록하기</button>
+            </div>
+          :
+            <div className="my-moving-day-text">
+              <p>{userInfo.movingday}</p>
+              <button onClick={()=>{setMovingForm(true)}}>변경하기</button>
+            </div>
+          }
+          {movingForm &&
             <form method="get" onSubmit={movingdaySubmitFn}>
               <select 
                 name="moving-year" 
@@ -81,7 +113,7 @@ export default function Moving(){
                 name="moving-month" 
                 id="moving-month-list"
                 onChange={changeMonthFn}
-                value={monthList[today.getMonth()].eng}
+                defaultValue={monthList[today.getMonth()].eng}
               >
                 {monthList.map((value)=>{
                   return(
@@ -93,7 +125,7 @@ export default function Moving(){
                 name="moving-day" 
                 id="moving-day-list"
                 onChange={changeDayFn}
-                value={today.getDate()}
+                defaultValue={today.getDate()}
               >
                 {dayList.map((value)=>{
                   return(
@@ -103,24 +135,22 @@ export default function Moving(){
               </select>
               <button type="submit">등록하기</button>
             </form>
-          </section>
-          <section className="moving-check">
-            <h3>요금 납부</h3>
-            <form action="" method="get">
-              <input type="text" />
-              <button type="submit">등록</button>
-            </form>
-            <ul className="moving-check-list">
-              <li>
-                <label>
-                  <input type="checkbox" name="" id="" /> 주차비
-                </label>
-              </li>
-            </ul>
-          </section>
-          {/* <p> 오늘 getDate 랑 계산해서 d- 남았습니다 보여주기</p> */}
-      </div>
-      }
-    </>
+          }
+        </section>
+        <section className="moving-check">
+          <h3>요금 납부</h3>
+          <form action="" method="get">
+            <input type="text" />
+            <button type="submit">등록</button>
+          </form>
+          <ul className="moving-check-list">
+            <li>
+              <label>
+                <input type="checkbox" name="" id="" /> 주차비
+              </label>
+            </li>
+          </ul>
+        </section>
+    </div>
   )
 }
