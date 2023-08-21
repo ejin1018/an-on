@@ -72,7 +72,7 @@ export default function Moving(){
     e.preventDefault();
     setMovingForm(false);
     axios.post(`${API_URL}/anonuser/${user.id}`,{
-      movingday:`${form.year}년 ${form.month}월 ${e.target[2].value} 일`
+      movingday:`${form.year}년 ${form.month}월 ${e.target[2].value}일`
     }).then((result)=>{
       console.log('이삿날 등록 성공',result)
     }).catch((err)=>{

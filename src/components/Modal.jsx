@@ -6,14 +6,12 @@ export default function Modal(props){
     <div className='modal'>
       <div className="modal-inner">
         <img src="/icons/botnav-home-fill.png" alt="" />
-        <p className="modal-msg">
           {props.msg.split("\n").map((txt)=>(
-            <>
+            <p className="modal-msg" key={txt}>
               {txt}
               <br/>
-            </>
+            </p>
           ))}
-        </p>
         <Link to={props.modalWhere}>{props.modalBtn}</Link>
       </div>
     </div>  
