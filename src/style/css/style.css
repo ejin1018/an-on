@@ -307,28 +307,29 @@ p, h1, h2, h3, h4, h5, h6 {
   max-width: 480px;
   min-width: 320px;
   transform: translateX(-50%);
-  border-radius: 0.8rem 0.8rem 0 0;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.7);
   box-shadow: 0px -2px 5px rgba(103, 147, 123, 0.1019607843);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   z-index: 999;
 }
 .botnav-wrap .botnav-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.8rem 0 1.4rem;
+  padding: 0.8rem 0 1.6rem;
 }
 .botnav-wrap .botnav-container li {
   max-width: 20%;
 }
 .botnav-wrap .botnav-container li .botnav-btn-icon {
   display: block;
-  width: 40%;
+  width: 35%;
   margin: 0 auto;
 }
 .botnav-wrap .botnav-container li .botnav-btn-name {
-  margin-top: 0.2rem;
-  font-size: 0.7rem;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
   text-align: center;
   color: #456250;
 }
@@ -867,6 +868,74 @@ p, h1, h2, h3, h4, h5, h6 {
 .living-shop .living-product-badge-sale {
   color: #000;
   background: #F6C915;
+}
+
+.moving section {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.moving section .section-title {
+  color: #fff;
+}
+.moving section button {
+  border: 0 none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 1rem;
+}
+.moving .my-moving {
+  padding-top: 20%;
+  padding-bottom: 6%;
+  border-radius: 0 0 1.5rem 1.5rem;
+  background: #67937B;
+}
+.moving .my-moving-day {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.moving .my-moving-day-text {
+  display: flex;
+  align-items: center;
+}
+.moving .my-moving-day-text p {
+  margin-right: 1rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #fff;
+}
+.moving .my-moving-day-text .btn-just {
+  width: 0.7rem;
+  height: 0.7rem;
+  padding: 0;
+  margin: 0 0 4px;
+  border: 2px solid #fff;
+  border-radius: 0;
+  border-top: 0 none;
+  border-left: 0 none;
+  transform: rotate(45deg);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.moving .my-moving-day-text .btn-moddifing {
+  margin: 4px 0 0;
+  transform: rotate(-135deg);
+}
+.moving .my-moving .moving-date-form select {
+  margin-right: 1.2rem;
+  padding: 0.5rem;
+  border: 0 none;
+  border-bottom: 2px solid #fff;
+  font-size: 1.1rem;
+  color: #fff;
+  background: transparent;
+}
+.moving .my-moving .moving-date-form button {
+  float: right;
+  margin-top: 4px;
+  font-size: 0.85rem;
+  background: #fff;
 }
 
 .mypage section {
