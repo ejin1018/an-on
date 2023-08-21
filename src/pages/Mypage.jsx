@@ -7,7 +7,9 @@ import MyCalendar from "../components/MyCalendar";
 import BotNav from "../components/BotNav"
 
 export default function Mypage(){
-  const user = useSelector(state => state);
+  const userEmail = useSelector(state => state.email);
+  const userNickname = useSelector(state => state.nickname);
+  const userCalendar = useSelector(state => state.calendar)
   const dispatch = useDispatch();
   const moveTo = useNavigate();
 
@@ -18,18 +20,18 @@ export default function Mypage(){
 
   return(
     <>
-      {user.email === null ?
+      {userEmail === null ?
         <Login />
       : (
       <div className="mypage">
         <BotNav />
         <section className="mypage-profile">
-          <h2 className="mypage-profile-name">{user.nickname} 님의 마이페이지</h2>
+          <h2 className="mypage-profile-name">{userNickname} 님의 마이페이지</h2>
           <button onClick={logoutFn}>로그아웃</button>
         </section>
         <section className="mypage-calendar">
           <h3 className="mypage-title">안온 캘린더</h3>
-          <MyCalendar user={user} />
+          <MyCalendar user={userCalendar} />
         </section>
         <section className="mypage-myanon">
           <h3 className="mypage-title">나의 안온</h3>

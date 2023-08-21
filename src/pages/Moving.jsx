@@ -6,12 +6,13 @@ import BotNav from "../components/BotNav";
 import Login from "./Login";
 
 export default function Moving(){
-  const user = useSelector(state => state);
+  const userId = useSelector(state => state.id);
+  const userEmail = useSelector(state => state.email);
   const [userInfo,setUserInfo] = useState('');
   const [movingForm,setMovingForm] = useState(false);
 
   const getUserInfo = ()=>{
-    axios.get(`${API_URL}/anonuser/${user.id}`).then((userInfo)=>{
+    axios.get(`${API_URL}/anonuser/${userId}`).then((userInfo)=>{
       setUserInfo(userInfo.data.anonUser)
     }).catch((err)=>{
       console.log('회원 조회 실패', err)
@@ -71,7 +72,7 @@ export default function Moving(){
   const movingdaySubmitFn = (e)=>{
     e.preventDefault();
     setMovingForm(false);
-    axios.post(`${API_URL}/anonuser/${user.id}`,{
+    axios.post(`${API_URL}/anonuser/${userId}`,{
       movingday:`${form.year}년 ${form.month}월 ${e.target[2].value}일`
     }).then((result)=>{
       console.log('이삿날 등록 성공',result)
@@ -83,7 +84,7 @@ export default function Moving(){
   return(
     <>
     {
-      user.email === null?
+      userEmail === null?
       <Login />
       :
       <div className="moving">

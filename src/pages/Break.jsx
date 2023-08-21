@@ -8,7 +8,7 @@ const breakWhere = ['지역','서울','경기','강원','충청','전라','경�
 const breakBoiler = ['브랜드','경서나비엔','림나이','두꺼비','소성셀틱','예스라인'];
 
 export default function Break(){
-  const user = useSelector(state => state);
+  const userEmail = useSelector(state => state.email);
   const submitBtn = useRef();
   const breakTitle = useRef();
   const breakDetail = useRef();
@@ -67,7 +67,7 @@ export default function Break(){
 
   return(
     <>
-      {user.email === null?
+      {userEmail === null?
         <Login />
       : (
         <div className="break">
