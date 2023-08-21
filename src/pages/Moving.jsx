@@ -22,9 +22,6 @@ export default function Moving(){
   useEffect(()=>{
     getUserInfo()
   },[])
-  useEffect(()=>{
-    getUserInfo()
-  },[userInfo])
 
   const today = new Date();
   const standYear = Number(today.getFullYear());
@@ -75,6 +72,7 @@ export default function Moving(){
     axios.post(`${API_URL}/anonuser/${userId}`,{
       movingday:`${form.year}년 ${form.month}월 ${e.target[2].value}일`
     }).then((result)=>{
+      getUserInfo();
       console.log('이삿날 등록 성공',result)
     }).catch((err)=>{
       console.log('이삿날 등록 실패',err)
